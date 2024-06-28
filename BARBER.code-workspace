@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../../CSS_Auto_Scroll_Animation"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "barberShop"
+	}
+}
