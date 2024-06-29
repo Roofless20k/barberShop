@@ -22,6 +22,15 @@
 	--fs-3: 1.75rem;
 	--fs-4: 2.25rem;
 	--fs-5: 4rem;
+
+	/* font colors */
+	/* light mode */
+	--lm-bckgrnd-clr: #fff;
+	--lm-font-clr: #000;
+
+	/* dark mode */
+	--dm-bckgrnd-clr: #000000;
+	--dm-font-clr: #fff;
 }
 
 body {
@@ -50,3 +59,35 @@ h1 {
 h2 {
 	font-size: clamp(1.25rem, 2vw, 1.5625rem);
 }
+
+
+/* Media Q for themes based on system setting */
+
+@media (prefers-color-scheme: dark) {
+	body {
+		background-color: var(--dm-bckgrnd-clr);
+		color: var(--dm-font-clr);
+	}
+}
+
+@media (prefers-color-scheme: light) {
+	body {
+		background-color: var(--lm-bckgrnd-clr);
+		color: var(--lm-font-clr);
+	}
+}
+
+/* Media Q for themes based on user choice*/
+
+@media () {
+    
+}
+/* body.light-mode {
+    background-color: var(--lm-bckgrnd-clr);
+    color: var(--lm-font-clr);
+}
+
+body.dark-mode {
+    background-color: --dm-bckgrnd-clr;
+    color: var(--dm-font-clr)
+} */
