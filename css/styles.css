@@ -1,0 +1,52 @@
+/* CSS Reset */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	/* font families */
+	--bodyFont: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+	--headFont: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+
+	/* font weights */
+	--fw-reg: 400;
+	--fw-bold: 500;
+	--fw-dark: 600;
+	--fw-void: 700;
+
+	/* font sizes */
+	--fs-1: 1rem;
+	--fs-2: 1.25rem;
+	--fs-3: 1.75rem;
+	--fs-4: 2.25rem;
+	--fs-5: 4rem;
+}
+
+body {
+	font-family: var(--bodyFont);
+	background-color: black;
+	color: #ffffff;
+	font-size: var(--fs-1); /* clamp???????????????????????? */
+	line-height: 1.3em;
+	letter-spacing: 0.03em;
+}
+
+.shopName {
+	font-size: clamp(0.8125rem, 1.5vw, 1rem);
+}
+
+h2,
+h1 {
+	font-family: var(--headFont);
+}
+
+h1 {
+	font-size: clamp(2.2rem, 6.4vw, 3.8125rem);
+	line-height: 1.2em;
+}
+
+h2 {
+	font-size: clamp(1.25rem, 2vw, 1.5625rem);
+}
