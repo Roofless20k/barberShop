@@ -52,7 +52,7 @@ p,
 li {
 	/* max-width: var(--p-max-width, 65ch); */
 	text-wrap: pretty;
-	max-width: 75ch;
+	max-width: 80ch;
 }
 
 /* Revert the 'white-space' property for textarea elements on Safari */
@@ -133,42 +133,149 @@ textarea {
 	--para-padding: 20px;
 }
 
-header {
-	display: flex;
-	flex-wrap: wrap;
-	padding: 25px;
-	padding-bottom: 0;
-	align-items: center;
-	justify-content: space-between;
+/* reusable overlay */
+.overlay{
+    border-image: linear-gradient(hsla(0, 0%, 0%, 0.99), hsla(0, 0%, 0%, 0.1))
+    fill 1;
+
 }
 
-header > nav,
-header > a {
-	/* padding: var(--section-padding); */
-}
-
-header > nav {
-	display: flex;
-}
+/* ################################################################ */
+/* BODY STYLES */
+/* ################################################################ */
 
 body {
 	font-family: var(--bodyFont);
 	background-color: black;
 	color: #ffffff;
-	font-size: var(--fs-1); /* clamp???????????????????????? */
-	line-height: 1.3em;
+	font-size: var(--fs-1);
+	line-height: 1.4em;
 	letter-spacing: 0.03em;
-	/* text-align: center; */
+	margin-inline: auto;
+	text-align: center;
+}
+
+/* .body-wrapper {
+    max-width: 1200px;
+    background-color: #102a4555;
+    margin-inline: auto ;
+} */
+
+/* ################################################################ */
+/* HEADER STYLES */
+/* ################################################################ */
+
+header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	height: 200px;
+	padding: 25px;
+	padding-bottom: 0;
+}
+
+header > nav {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 2vw;
+}
+
+header > nav > a {
+	background-color: rgb(2, 3, 3);
+	color: #fff;
+	font-size: clamp(0.875rem, 1.5vw, 1.4rem);
+	text-decoration: none;
+	font-family: var(--headFont);
+}
+
+/* ################################################################ */
+/* SECTIONS STYLES */
+/* ################################################################ */
+
+.sections {
+	padding: 80px;
+}
+
+.hero_section {
+    display: flex;
+	align-items: center;
+	justify-content: center;
+    min-height: calc(100vh - 200px); /* -200px for the header :) */
+    min-height: calc(100vh - 200px); /* -200px for the header :) */
+    background-color: rgb(7, 0, 46);
+    background-image: url(../images/salah-regouane-cFtUyJS0v20-unsplash2.jpg);
+    background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center ;
+    background-attachment:fixed ;
+}
+
+.hero_section > div {
+    display: flex;
+    flex-direction: column;
+	align-items: center;
+    justify-content: center;
+    /* background-color:rgba(37, 6, 66, 0.668); */
+    max-width: 1020px;
+    height: 60vh;
 }
 
 .shopName {
-	/* font-size: clamp(0.8125rem, 1.5vw, 1rem); */
-	font-size: var(--fs-topper);
+	font-size: 1.5vw;
+    padding-bottom: 17px;
 }
+
+.hero_h1 {
+    padding-bottom: 100px;
+}
+
+.hero_BTN {
+    font-size: 25px;
+    font-weight: var(--fw-void);
+}
+
+.about_section {
+    display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.services_section {
+    display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.prices_section > .prices_flex_div {
+    display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+}
+
+.gallery_section {
+}
+
+.testimonials_section {
+}
+
+.contact_section {
+    display: flex;
+	align-items: center;
+	justify-content: space-between;
+    margin: 0;
+}
+
+/* ################################################################ */
+/* ________ STYLES */
+/* ################################################################ */
+
+
 
 h2,
 h1 {
 	font-family: var(--headFont);
+	font-weight: var(--fw-void);
 }
 
 h1 {
@@ -178,7 +285,7 @@ h1 {
 }
 
 h2 {
-	/* font-size: clamp(1.25rem, 2vw, 1.5625rem); */
+	font-size: clamp(1.25rem, 2vw, 1.5625rem);
 }
 
 /* temp style to differentiate different sections on the site */
@@ -187,7 +294,12 @@ h2 {
 	background-color: rgb(11, 97, 151);
 }
 
+.sections:nth-child(odd):not(.hero_section) {
+	background-color: rgb(53, 10, 61);
+}
+/* ################################################################ */
 /* Media Q for themes based on system setting */
+/* ################################################################ */
 
 @media (prefers-color-scheme: dark) {
 	body {
@@ -203,16 +315,16 @@ h2 {
 	}
 }
 
-/* Media Q for themes based on user choice*/
+/* Media Q for themes based on user choice, using a class on body*/
 
-@media() {
+/* @media() {
 }
-/* body.light-mode {
-    background-color: var(--lm-bckgrnd-clr);
-    color: var(--lm-font-clr);
+body.light-mode {
+	background-color: var(--lm-bckgrnd-clr);
+	color: var(--lm-font-clr);
 }
 
 body.dark-mode {
-    background-color: --dm-bckgrnd-clr;
-    color: var(--dm-font-clr)
+	background-color: --dm-bckgrnd-clr;
+	color: var(--dm-font-clr);
 } */
