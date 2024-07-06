@@ -134,10 +134,8 @@ textarea {
 }
 
 /* reusable overlay */
-.overlay{
-    border-image: linear-gradient(hsla(0, 0%, 0%, 0.99), hsla(0, 0%, 0%, 0.1))
-    fill 1;
-
+.overlay {
+	border-image: linear-gradient(hsla(0, 0%, 0%, 0.99), hsla(0, 0%, 0%, 0.1)) fill 1;
 }
 
 /* ################################################################ */
@@ -170,8 +168,8 @@ header {
 	align-items: center;
 	justify-content: space-between;
 	height: 200px;
-	padding: 25px;
-	padding-bottom: 0;
+	padding: 45px;
+	padding-block: 0;
 }
 
 header > nav {
@@ -182,11 +180,21 @@ header > nav {
 }
 
 header > nav > a {
-	background-color: rgb(2, 3, 3);
+	/* background-color: rgb(18, 194, 194); */
 	color: #fff;
 	font-size: clamp(0.875rem, 1.5vw, 1.4rem);
 	text-decoration: none;
 	font-family: var(--headFont);
+    line-height: 1.5em;
+}
+
+header > nav > a:hover, header > nav > a:focus {
+    color: #daa520;
+    border-bottom: rgb(255, 255, 255);
+	text-shadow: 3px 3px 6px hsla(0, 0%, 100%, 0.858);
+	transform: translateY(-2.6px);
+	transition-duration: 780ms;
+	transition-property: background-color, transform;
 }
 
 /* ################################################################ */
@@ -194,63 +202,149 @@ header > nav > a {
 /* ################################################################ */
 
 .sections {
-	padding: 80px;
+	/* padding: 60px; */
+    /* padding-bottom: 0; */
+    min-height: 100vh;
 }
 
 .hero_section {
-    display: flex;
+	display: flex;
 	align-items: center;
 	justify-content: center;
-    min-height: calc(100vh - 200px); /* -200px for the header :) */
-    min-height: calc(100vh - 200px); /* -200px for the header :) */
-    background-color: rgb(7, 0, 46);
-    background-image: url(../images/salah-regouane-cFtUyJS0v20-unsplash2.jpg);
-    background-repeat: no-repeat;
+	min-height: calc(100vh - 200px); /* -200px for the header :) */
+	min-height: calc(100vh - 200px); /* -200px for the header :) */
+	background-color: rgb(7, 0, 46);
+	background-image: url(../images/salah-regouane-cFtUyJS0v20-unsplash.jpg);
+	background-repeat: no-repeat;
 	background-size: cover;
-	background-position: center ;
-    background-attachment:fixed ;
+	background-position: center;
+	background-attachment: fixed;
 }
 
 .hero_section > div {
-    display: flex;
-    flex-direction: column;
+	display: flex;
+	flex-direction: column;
 	align-items: center;
-    justify-content: center;
-    /* background-color:rgba(37, 6, 66, 0.668); */
-    max-width: 1020px;
-    height: 60vh;
+	justify-content: center;
+	/* background-color:rgba(37, 6, 66, 0.668); */
+	max-width: 1020px;
+	height: 60vh;
 }
 
 .shopName {
 	font-size: 1.5vw;
-    padding-bottom: 17px;
+	padding-bottom: 17px;
+    font-style: italic;
 }
 
 .hero_h1 {
-    padding-bottom: 100px;
+	padding-bottom: 10px;
+	font-weight: 500;
+	line-height: 1.45em;
+	/* background: #ffffff;
+	background: linear-gradient(to right, #ffffff 0%, #daa520 100%);
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent; */
 }
 
 .hero_BTN {
-    font-size: 25px;
-    font-weight: var(--fw-void);
+	font-size: 25px;
+	font-weight: var(--fw-void);
+	background-color: #daa520;
+	color: var(--lm-font-clr);
+	padding-inline: 20px;
+	padding-block: 15px;
+	text-decoration: none;
+	border-radius: 20px;
+}
+
+.hero_BTN:hover {
+    color: #fff;
+	background-color: #daa52076;
 }
 
 .about_section {
-    display: flex;
+    /* background-color: #700d0d; */
+	display: flex;
 	align-items: center;
 	justify-content: space-between;
+    gap: 40px;
+}
+
+.about_section > img {
+    flex: 2 1 650px;
+    border-radius: 10px;
+    aspect-ratio: 4/3;
+}
+
+.about_section > div {
+    display: flex;
+    flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
+    flex-grow: 1;
 }
 
 .services_section {
-    display: flex;
+	display: flex;
 	align-items: center;
 	justify-content: space-between;
+    gap: 40px;
 }
 
-.prices_section > .prices_flex_div {
+.services_section > img {
+    flex: 2 1 650px;
+    border-radius: 10px;
+    aspect-ratio: 4/3;
+}
+
+.services_section > div {
     display: flex;
+    flex-direction: column;
 	align-items: center;
 	justify-content: space-evenly;
+    flex-grow: 1;
+}
+
+.prices_section {
+
+}
+
+.prices_flex_div {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.prices_flex_div > ul:nth-of-type(1) {
+    /* background-color: rgb(2, 69, 69); */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-inline-start: 500px;
+}
+
+.prices_flex_div > ul:nth-of-type(2) {
+    /* background-color: rgb(2, 69, 69); */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-inline-end: 500px;
+}
+
+.prices_flex_div > ul {
+    flex: 1 1 auto;
+    list-style: none;
+}
+
+.prices_flex_div > ul > li {
+    padding-bottom: 24px;
+}
+
+.prices_flex_div > ul >:nth-child(even) {
+    color: #daa520;
+
 }
 
 .gallery_section {
@@ -260,17 +354,19 @@ header > nav > a {
 }
 
 .contact_section {
-    display: flex;
+	display: flex;
 	align-items: center;
-	justify-content: space-between;
-    margin: 0;
+	justify-content: space-evenly;
+    background-image: url(../images/barber-chair-salon-hairdresser-previewBW.jpg);
+    background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	margin: 0;
 }
 
 /* ################################################################ */
 /* ________ STYLES */
 /* ################################################################ */
-
-
 
 h2,
 h1 {
@@ -285,16 +381,23 @@ h1 {
 }
 
 h2 {
-	font-size: clamp(1.25rem, 2vw, 1.5625rem);
+	font-size: clamp(1.25rem, 3vw, 2.5625rem);
+    margin-block: 60px;
+    color: #daa520;
+}
+
+p {
+    margin-block: 30px;
+    padding-bottom: 15p;
 }
 
 /* temp style to differentiate different sections on the site */
 
-.sections:nth-child(even) {
+.sections:nth-child(even):not(.about_section, .prices_section) {
 	background-color: rgb(11, 97, 151);
 }
 
-.sections:nth-child(odd):not(.hero_section) {
+.sections:nth-child(odd):not(.hero_section, .services_section) {
 	background-color: rgb(53, 10, 61);
 }
 /* ################################################################ */
@@ -328,3 +431,12 @@ body.dark-mode {
 	background-color: --dm-bckgrnd-clr;
 	color: var(--dm-font-clr);
 } */
+
+
+/* ################################################################ */
+/* FOOTER STYLES */
+/* ################################################################ */
+
+.Gmap {
+    border-radius: 10px;
+}
