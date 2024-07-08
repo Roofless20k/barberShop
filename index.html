@@ -5,27 +5,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BARBER SHOP</title>
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body class="light-mode">
     <div class="body-wrapper">
-        <header>
-            <a href="#">
+        <header id="hero">
+            <a href="#hero">
                 <img src="images/maestro_logo_zoomed_transp_crop.png" alt="business logo and home button" width="150" height="150">
             </a>
             <nav>
-                <a href="#">*|||*</a>
-                <a href="#HOME">HOME</a>
-                <a href="#ABOUT">ABOUT</a>
-                <a href="#SERVICES">SERVICES</a>
-                <a href="#PRICES">PRICES</a>
-                <a href="#GALLERY">GALLERY</a>
-                <a href="#TESTIMONIALS">TESTIMONIALS</a>
-                <a href="#CONTACT">CONTACT</a>
+                <!-- <a href="#">*|||*</a> -->
+                <a href="#hero">HOME</a>
+                <a href="#about">ABOUT</a>
+                <a href="#services">SERVICES</a>
+                <a href="#prices">PRICES</a>
+                <a href="#gallery">GALLERY</a>
+                <a href="#testimonials">TESTIMONIALS</a>
+                <a href="#contact">CONTACT</a>
             </nav>
         </header>
-
         <main>
             <section class="sections hero_section overlay">
                 <div>
@@ -34,8 +34,7 @@
                     <a href="#" class="hero_BTN">FIND US TODAY</a>
                 </div>
             </section>
-
-            <section class="sections about_section">
+            <section id="about"  class="sections about_section">
                 <div>
                     <h2>ABOUT US</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus quisquam dignissimos ad! Error hic pariatur ut, odit, soluta molestiae cupiditate repudiandae accusantium, fugit consectetur qui eligendi modi incidunt eius itaque!</p>
@@ -44,8 +43,7 @@
                 </div>
                 <img src="images/allef-vinicius-IvQeAVeJULw-unsplash.jpg" loading="lazy" alt="">
             </section>
-
-            <section class="sections services_section">
+            <section id="services" class="sections services_section">
                 <img src="images/andrea-donato-MNu0n-3BIKs-unsplash.jpg" width="58%" alt="" loading="lazy">
                 <div>
                     <h2>OUR SERVICES</h2>
@@ -54,7 +52,7 @@
                 </div>
             </section>
 
-            <section class="sections prices_section">
+            <section id="prices" class="sections prices_section">
                 <h2>PRICES</h2>
                 <div class="prices_flex_div">
                     <ul>
@@ -87,7 +85,7 @@
                 </div>
             </section>
 
-            <section class="sections gallery_section">
+            <section id="gallery" class="sections gallery_section">
                 <div>
                     <h2>GALLERY</h2>
                 </div>
@@ -103,7 +101,7 @@
                 </div>
             </section>
 
-            <section class="sections testimonials_section">
+            <section id="testimonials" class="sections testimonials_section">
                 <div>
                     <h2>TESTIMONIALS</h2>
                 </div>
@@ -121,7 +119,7 @@
         </main>
 
         <footer>
-            <section class="sections contact_section overlay">
+            <section id="contact" class="sections contact_section overlay">
                 <div>
                     <h2>CONTACT US</h2>
                     <div>PHONE : 999-999-9999</div>
@@ -129,9 +127,15 @@
                     <div>ADDRESS : 1111 example road, Hillsborough BLVD, Deerfield Beach, FL, 33333</div>
                 </div>
                 <div>
-                    <div>FB</div>
-                    <div>X</div>
-                    <div>IG</div>
+                    <a href="#"><svg class="SocialIcon" xmlns="http://www.w3.org/2000/svg" height="72" width="28" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                            <path d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64h98.2V334.2H109.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H255V480H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64z" />
+                        </svg></a>
+                    <a href="#"><svg class="SocialIcon" xmlns="http://www.w3.org/2000/svg" height="72" width="32" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                            <path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z" />
+                        </svg></a>
+                    <a href="#"><svg class="SocialIcon" xmlns="http://www.w3.org/2000/svg" height="72" width="28" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                            <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
+                        </svg></a>
                 </div>
                 <div>
                     <h3>OUR LOCATION</h3>
@@ -141,6 +145,7 @@
         </footer>
         <!-- <div>DESIGN AND CUSTOM CODE BY WEB SOLUTIONS LLC</div> -->
     </div>
+    <div class="scrollUp"><a href="#hero">&#x21d1;</a></div>
 </body>
 
 </html>
