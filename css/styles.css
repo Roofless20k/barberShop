@@ -286,21 +286,30 @@ header > nav > a:focus {
 PAIN :)
 */
 .scrollUp {
+    display: none;
     position: fixed;
-    font-size: 1.7rem;
+    font-size: 2.7rem;
+    line-height: 2.7rem;
     font-weight: 900;
     bottom: 70px;
-    right: 30px;
-    margin: 30px;
-    z-index: 1000;
-    width: 50px;
-    height: 50px;
-    line-height: 150px;
+    right: 7px;
+    z-index: 1000;   
 }
 
 .scrollUp > a {
     color: #ffffff;
-    text-shadow: 0.015em 0.015em 0 #000000, 0.025em 0.025em 0 #daa520, 0.045em 0.045em 0 #000000;;
+    text-shadow: 0.015em 0.015em 0 #000000, 0.025em 0.025em 0 #daa520, 0.045em 0.045em 0 #ffffff;;
+    padding-top: 4px;
+    padding-inline: 14px;
+    padding-bottom: 20px;
+
+}
+
+.scrollUp > a:hover {
+    border-radius: 15px;
+    background-color: #daa52046;
+    color: #daa520;
+    text-shadow: 0.025em 0.025em 0 #000000, 0.045em 0.045em 0 #daa520, 0.075em 0.075em 0 #ffffff;;
 }
 
 .about_section > img {
