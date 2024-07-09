@@ -8,6 +8,7 @@
 		}
 	],
 	"settings": {
-		"liveServer.settings.multiRootWorkspaceName": "barberShop"
+		"liveServer.settings.multiRootWorkspaceName": "barberShop",
+		"cSpell.words": ["adipisicing"]
 	}
 }
