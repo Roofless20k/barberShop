@@ -110,10 +110,15 @@ textarea {
 	--fs-topper: var(--fs-3);
 	--fs-header: var(--fs-5);
 
-	/* font colors */
+	/* FONT COLOR */
+
+    /* BRAND COLOR */
+    --brand-primary: #daa520;
+
+
 	/* light mode */
-	--lm-bckgrnd-clr: #fff;
-	--lm-font-clr: #000;
+	--lm-bckgrnd-clr: hsla(43, 74%, 49%, .2);
+	--lm-font-clr: #000000;
 
 	/* dark mode */
 	--dm-bckgrnd-clr: #000000;
@@ -132,6 +137,12 @@ textarea {
 	border-image: linear-gradient(hsla(0, 0%, 0%, 0.99), hsla(0, 0%, 0%, 0.1)) fill 1;
 }
 
+.overlay-light {
+	border-image: linear-gradient(hsla(0, 0%, 0%, 0.99), hsla(0, 0%, 0%, 0.1)) fill 1;
+}
+
+
+
 /* ################################################################ */
 /* BODY STYLES */
 /* ################################################################ */
@@ -147,11 +158,11 @@ body {
 	text-align: center;
 }
 
-/* .body-wrapper {
-    max-width: 1200px;
-    background-color: #102a4555;
+.body-wrapper {
+    max-width: 2000px;
+    /* background-color: #102a4555; */
     margin-inline: auto ;
-} */
+}
 
 /* ################################################################ */
 /* HEADER STYLES */
@@ -184,12 +195,12 @@ header > nav > a {
 
 header > nav > a:hover,
 header > nav > a:focus {
-	color: #daa520;
+	color: var(--brand-primary);
 	border-bottom: 3px solid rgb(255, 255, 255);
-	text-shadow: 0.025em 0.025em 0 #000000, 0.05em 0.05em 0 #daa520, 0.075em 0.075em 0 #000000;
-	transform: translateY(-3px);
-	transition-duration: 280ms;
-	transition-property: border-bottom, background-color, transform;
+	text-shadow: 0.025em 0.025em 0 #000000, 0.05em 0.05em 0 var(--brand-primary), 0.075em 0.075em 0 #ffffff;
+	transform: translateY(-2px);
+	transition-duration: 380ms;
+	transition-property: border-bottom, background-color, transform, text-shadow;
 }
 
 /* ################################################################ */
@@ -247,7 +258,7 @@ header > nav > a:focus {
 .shopName {
 	font-size: 1.5vw;
 	font-style: italic;
-	color: #daa520;
+	color: var(--brand-primary);
     text-shadow: 0.025em 0.025em 4px #000000
 }
 
@@ -275,9 +286,9 @@ header > nav > a:focus {
 	padding-bottom: 10px;
 	font-weight: 500;
 	line-height: 1.45em;
-	text-shadow: 0.025em 0.025em 0 #000000, 0.05em 0.05em 0 #daa520, 0.075em 0.075em 0 #000000;
+	text-shadow: 0.025em 0.025em 0 #000000, 0.05em 0.05em 0 var(--brand-primary), 0.075em 0.075em 0 #000000;
 	/* background: #ffffff;
-	background: linear-gradient(to right, #ffffff 0%, #daa520 100%);
+	background: linear-gradient(to right, #ffffff 0%, var(--brand-primary) 100%);
 	-webkit-background-clip: text;
 	background-clip: text;
 	-webkit-text-fill-color: transparent; */
@@ -286,9 +297,9 @@ header > nav > a:focus {
 .hero_BTN {
 	font-size: 25px;
 	font-weight: var(--fw-void);
-	background-color: #daa520;
+	background-color: var(--brand-primary);
 	color: var(--lm-font-clr);
-    text-shadow: 0.025em 0.025em 0 #ffffff, 0.05em 0.05em 0 #daa520, 0.075em 0.075em 0 #ffffff;
+    text-shadow: 0.025em 0.025em 0 #ffffff, 0.05em 0.05em 0 var(--brand-primary), 0.075em 0.075em 0 #000000;
 	padding-inline: 20px;
 	padding-block: 15px;
 	text-decoration: none;
@@ -554,7 +565,7 @@ footer {
 
 .SocialIcon {
 	/* color: #fff; */
-	background-color: #daa520;
+	background-color: var(--brand-primary);
 	width: 63px;
 	font-size: 2.5rem;
 	margin-bottom: 20px;
@@ -563,7 +574,6 @@ footer {
 }
 
 .SocialIcon:hover {
-	background-color: #daa520;
 	border-bottom: 6px solid rgb(255, 255, 255);
 	border-left: 3px solid rgb(255, 255, 255);
 	border-right: 3px solid rgb(255, 255, 255);
@@ -589,8 +599,8 @@ footer {
 
 .scrollUp > a {
 	background-color: #daa52044;
-	color: #daa520;
-	text-shadow: 0.015em 0.015em 0 #000000, 0.025em 0.025em 0 #daa520, 0.045em 0.045em 0 #ffffff;
+	color: var(--brand-primary);
+	text-shadow: 0.015em 0.015em 0 #000000, 0.025em 0.025em 0 var(--brand-primary), 0.045em 0.045em 0 #000000;
 	padding-inline: 4px;
 	padding-block: 3px;
 	text-decoration: none;
@@ -600,7 +610,7 @@ footer {
 .scrollUp > a:hover {
 	color: #ffffff;
 	background-color: #daa52073;
-	text-shadow: 0.025em 0.025em 0 #000000, 0.04em 0.04em 0 #daa520, 0.05em 0.05em 0 #ffffff;
+	text-shadow: 0.025em 0.025em 0 #000000, 0.04em 0.04em 0 var(--brand-primary), 0.05em 0.05em 0 #ffffff;
 }
 
 /* ################################################################ */
@@ -622,8 +632,8 @@ h1 {
 h2 {
 	font-size: clamp(1.25rem, 3vw, 2.5625rem);
 	padding-block: 60px;
-	color: #daa520;
-	text-shadow: 0.025em 0.025em 0 #fefefe, 0.05em 0.05em 0 #daa520, 0.075em 0.075em 0 #ffffff;
+	color: var(--brand-primary);
+	text-shadow: 0.025em 0.025em 0 #fefefe, 0.05em 0.05em 0 #000000, 0.075em 0.075em 0 #ffffff;
 }
 
 p {
@@ -640,6 +650,8 @@ p {
 .sections:nth-child(odd) {
 	/* background-color: rgb(53, 10, 61); */
 }
+
+
 
 /* ################################################################ */
 /* Media Q for themes based on system setting */
