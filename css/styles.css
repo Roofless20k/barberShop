@@ -110,6 +110,8 @@ textarea {
 	--fs-topper: var(--fs-3);
 	--fs-header: var(--fs-5);
 
+    --fs-paragraphs: 1rem;
+
 	/* FONT COLOR */
 
 	/* BRAND COLOR */
@@ -223,6 +225,7 @@ header > nav > a:focus {
 	background-size: cover;
 	background-position: center;
 	background-attachment: fixed;
+    margin-top: -2px;
 }
 
 .hero_section > div {
@@ -258,7 +261,7 @@ header > nav > a:focus {
 }
 
 .shopName {
-	font-size: 1.5vw;
+	font-size: clamp(1rem, 1.9vw, 1.8rem);
 	font-style: italic;
 	color: var(--brand-primary);
 	text-shadow: 0.025em 0.025em 4px #000000;
@@ -286,23 +289,20 @@ header > nav > a:focus {
 }
 
 .hero_h1 {
+    font-size: clamp(2.2rem, 6.4vw, 3.8125rem);
 	padding-bottom: 10px;
 	font-weight: 500;
 	line-height: 1.45em;
 	text-shadow: 0.025em 0.025em 0 #000000, 0.05em 0.05em 0 var(--brand-primary), 0.075em 0.075em 0 #000000;
-	/* background: #ffffff;
-	background: linear-gradient(to right, #ffffff 0%, var(--brand-primary) 100%);
-	-webkit-background-clip: text;
-	background-clip: text;
-	-webkit-text-fill-color: transparent; */
+	
 }
 
 .hero_BTN {
-	font-size: 25px;
+	font-size: clamp(1rem, 1.9vw, 1.5rem);
 	font-weight: var(--fw-void);
 	background-color: var(--brand-primary);
 	color: var(--lm-font-clr);
-	text-shadow: 0.025em 0.025em 0 #ffffff, 0.05em 0.05em 0 var(--brand-primary), 0.075em 0.075em 0 #000000;
+	text-shadow: 0.045em 0.045em 0 #ffffff, 0.07em 0.07em 0 black, 0.09em 0.09em 0 rgb(255, 255, 255);
 	padding-inline: 20px;
 	padding-block: 15px;
 	text-decoration: none;
@@ -621,11 +621,6 @@ h1 {
 	line-height: 1.2em;
 }
 
-h1 {
-	font-size: clamp(2.2rem, 6.4vw, 3.8125rem);
-	font-size: var(--fs-header);
-}
-
 h2 {
 	font-size: clamp(1.25rem, 3vw, 2.5625rem);
 	padding-block: 60px;
@@ -636,6 +631,7 @@ h2 {
 p {
 	padding-block: 30px;
 	padding-bottom: 15p;
+    font-size: var(--fs-paragraphs);
 }
 
 /* temp style to differentiate different sections on the site */
@@ -720,7 +716,7 @@ p {
 
 	header > nav > a:hover,
 	header > nav > a:focus {
-		border-bottom: 3px solid rgb(0, 0, 0);
+		border-bottom: 3px solid var(--brand-primary);
 		text-shadow: 0.025em 0.025em 0 #000000, 0.05em 0.05em 0 var(--brand-primary), 0.075em 0.075em 0 #000000;
 	}
 
@@ -754,4 +750,15 @@ p {
 
 .visibly-hidden {
 	display: none;
+}
+
+
+/* ################################################################ */
+/* ####################### MEDIA QUERIES  ######################### */
+/* ################################################################ */
+
+@media (width < 1000px) {
+    body {
+        background-color: #2c29ff;
+    }
 }
