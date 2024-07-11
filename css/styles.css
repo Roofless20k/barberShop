@@ -62,7 +62,7 @@ textarea {
 
 /* improve page scrolling on click when user accepts scrolling  */
 /* scroll more in any direction based on padding size */
-@media (prefers-reduced-motion: no-preference)  {
+@media (prefers-reduced-motion: no-preference) {
 	html {
 		scroll-behavior: smooth;
 		/* scroll-padding-top: 0.0001px;  */
@@ -72,7 +72,7 @@ textarea {
 /* above this: KP reset */
 
 /* ################################################################ */
- /* possible vars to use */
+/* possible vars to use */
 
 /* :root {
 	--primary: #e41b25;
@@ -112,12 +112,11 @@ textarea {
 
 	/* FONT COLOR */
 
-    /* BRAND COLOR */
-    --brand-primary: #daa520;
-
+	/* BRAND COLOR */
+	--brand-primary: #da9920;
 
 	/* light mode */
-	--lm-bckgrnd-clr: hsla(43, 74%, 49%, .2);
+	--lm-bckgrnd-clr: hsla(43, 74%, 49%, 0.2);
 	--lm-font-clr: #000000;
 
 	/* dark mode */
@@ -132,25 +131,27 @@ textarea {
 	--para-padding: 20px;
 }
 
-/* reusable overlay */
+/* ################################################################ */
+/* ######################## REUSABLE STYLES ####################### */
+/* ################################################################ */
+
+/* REUSABLE OVERLAY */
 .overlay {
-	border-image: linear-gradient(hsla(0, 0%, 0%, 0.99), hsla(0, 0%, 0%, 0.1)) fill 1;
+	border-image: linear-gradient(hsl(0, 0%, 0%), hsla(0, 0%, 0%, 0.1)) fill 1;
 }
 
 .overlay-light {
-	border-image: linear-gradient(hsla(0, 0%, 0%, 0.99), hsla(0, 0%, 0%, 0.1)) fill 1;
+	border-image: linear-gradient(hsl(30, 4%, 10%), hsla(43, 74%, 49%, 0.1)) fill 1;
 }
 
-
-
 /* ################################################################ */
-/* BODY STYLES */
+/* ######################### BODY STYLES ########################## */
 /* ################################################################ */
 
 body {
 	font-family: var(--bodyFont);
-	background-color: black;
-	color: #ffffff;
+	background-color: var(--dm-bckgrnd-clr);
+	color: var(--dm-font-clr);
 	font-size: var(--fs-1);
 	line-height: 1.4em;
 	letter-spacing: 0.03em;
@@ -159,13 +160,13 @@ body {
 }
 
 .body-wrapper {
-    max-width: 2000px;
-    /* background-color: #102a4555; */
-    margin-inline: auto ;
+	max-width: 2000px;
+	/* background-color: #102a4555; */
+	margin-inline: auto;
 }
 
 /* ################################################################ */
-/* HEADER STYLES */
+/* ######################### HEADER STYLES ######################## */
 /* ################################################################ */
 
 header {
@@ -186,7 +187,7 @@ header > nav {
 
 header > nav > a {
 	/* background-color: rgb(18, 194, 194); */
-	color: #fff;
+	color: var(--dm-font-clr);
 	font-size: clamp(0.875rem, 1.5vw, 1.4rem);
 	text-decoration: none;
 	font-family: var(--headFont);
@@ -204,7 +205,7 @@ header > nav > a:focus {
 }
 
 /* ################################################################ */
-/* SECTIONS STYLES */
+/* ######################## SECTION STYLES ######################## */
 /* ################################################################ */
 
 .sections {
@@ -225,7 +226,7 @@ header > nav > a:focus {
 }
 
 .hero_section > div {
-    position: relative;
+	position: relative;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -235,51 +236,53 @@ header > nav > a:focus {
 	height: 60vh;
 }
 
-.hero_section > div::before, .hero_section > div::after {
-    position: absolute;
-    content: "";
-    width: 130px;
-    height: 130px;
-    border: 2px white solid;
-    border-bottom: 0;
-    border-right: 0; 
-    top: 0;
+.hero_section > div::before,
+.hero_section > div::after {
+	position: absolute;
+	content: "";
+	width: 130px;
+	height: 130px;
+	border: 4px white solid;
+	border-bottom: 0;
+	border-right: 0;
+	top: 0;
 }
 
 .hero_section > div::before {
-    left: 0;
+	left: 0;
 }
 
 .hero_section > div::after {
-    right: 0;
-    transform: rotate(90deg);
+	right: 0;
+	transform: rotate(90deg);
 }
 
 .shopName {
 	font-size: 1.5vw;
 	font-style: italic;
 	color: var(--brand-primary);
-    text-shadow: 0.025em 0.025em 4px #000000
+	text-shadow: 0.025em 0.025em 4px #000000;
 }
 
-.shopName::before, .shopName::after {
-    position: absolute;
-    content: "";
-    width: 130px;
-    height: 130px;
-    border: 2px white solid;
-    border-top: 0;
-    border-right: 0; 
-    bottom: 0;
+.shopName::before,
+.shopName::after {
+	position: absolute;
+	content: "";
+	width: 130px;
+	height: 130px;
+	border: 4px white solid;
+	border-top: 0;
+	border-right: 0;
+	bottom: 0;
 }
 
 .shopName::before {
-    left: 0;
+	left: 0;
 }
 
 .shopName::after {
-    right: 0;
-    transform: rotate(-90deg);
+	right: 0;
+	transform: rotate(-90deg);
 }
 
 .hero_h1 {
@@ -299,7 +302,7 @@ header > nav > a:focus {
 	font-weight: var(--fw-void);
 	background-color: var(--brand-primary);
 	color: var(--lm-font-clr);
-    text-shadow: 0.025em 0.025em 0 #ffffff, 0.05em 0.05em 0 var(--brand-primary), 0.075em 0.075em 0 #000000;
+	text-shadow: 0.025em 0.025em 0 #ffffff, 0.05em 0.05em 0 var(--brand-primary), 0.075em 0.075em 0 #000000;
 	padding-inline: 20px;
 	padding-block: 15px;
 	text-decoration: none;
@@ -309,7 +312,7 @@ header > nav > a:focus {
 .hero_BTN:hover {
 	color: #fff;
 	background-color: #daa52076;
-    text-shadow: 0.045em 0.045em 2px #000000
+	text-shadow: 0.045em 0.045em 2px #000000;
 	/* border: 1px solid #fff; */
 }
 
@@ -320,9 +323,6 @@ header > nav > a:focus {
 	justify-content: space-between;
 	gap: 40px;
 	/* margin-top: -101px; */
-}
-
-.home-side-button {
 }
 
 .about_section > img {
@@ -367,7 +367,7 @@ header > nav > a:focus {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-    margin-top: 100px;
+	margin-top: 100px;
 }
 
 .prices_flex_div > ul:nth-of-type(1) {
@@ -375,15 +375,14 @@ header > nav > a:focus {
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
-	padding-inline-start: 500px;
+	align-items: center;
 }
 
 .prices_flex_div > ul:nth-of-type(2) {
 	/* background-color: rgb(2, 69, 69); */
 	display: flex;
 	flex-direction: column;
-	align-items: flex-end;
-	padding-inline-end: 500px;
+	align-items: center;
 }
 
 .prices_flex_div > ul {
@@ -396,11 +395,11 @@ header > nav > a:focus {
 }
 
 .prices_flex_div > ul > :nth-child(even) {
-	color: hsl(43, 74%, 49%);
+	color: var(--brand-primary);
 }
 
 /* ################################################################ */
-/* GALLERY STYLES */
+/* ######################## GALLERY STYLES ######################## */
 /* ################################################################ */
 
 @keyframes slideLeft {
@@ -413,69 +412,64 @@ header > nav > a:focus {
 }
 
 .gallery_section {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    min-height: 49vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	min-height: 49vh;
 }
 
 .gallery_section > div > h2 {
-    padding: 0;
+	padding: 0;
 }
 
 .gallery-outer {
-    position: relative;
-    vertical-align: middle;
+	position: relative;
+	vertical-align: middle;
 	overflow: hidden;
-    white-space: nowrap;
-    padding: 0;
+	white-space: nowrap;
+	padding: 0;
 }
 
-.gallery-outer::before, .gallery-outer::after {
-    position: absolute;
-    top: 0;
-    content: "";
-    z-index: 999;
-    width: 25%;
-    height: 100%;
+.gallery-outer::before,
+.gallery-outer::after {
+	position: absolute;
+	top: 0;
+	content: "";
+	z-index: 2;
+	width: 25%;
+	height: 100%;
 }
 
 .gallery-outer::before {
-    left: 0;
-    background: linear-gradient(to left,  hsla(0, 0%, 0%, 0) , hsl(0, 0%, 0%) );
+	left: 0;
+	background: linear-gradient(to left, hsla(0, 0%, 0%, 0), hsl(0, 0%, 0%));
 }
 
 .gallery-outer::after {
-    right: 0;
-    background: linear-gradient(to right,  hsla(0, 0%, 0%, 0) , hsl(0, 0%, 0%) );
+	right: 0;
+	background: linear-gradient(to right, hsla(0, 0%, 0%, 0), hsl(0, 0%, 0%));
 }
 
 .gallery-inner {
-    display: inline-block;
+	display: inline-block;
 	animation: 55s slideLeft infinite linear;
 }
 
 .gallery-outer:hover .gallery-inner {
-    animation-play-state: paused;
+	animation-play-state: paused;
 }
 
-.gallery-inner  img {
-    display: inline-block;
+.gallery-inner img {
+	display: inline-block;
 	max-height: 100%;
-    max-width: initial;
+	max-width: initial;
 	aspect-ratio: 4/3;
-    margin-inline: 40px;
+	margin-inline: 40px;
+	vertical-align: middle;
 }
-
-/* .gallery-inner-2 > img {
-	height: 250px;
-	width: 250px;
-	aspect-ratio: 3/2;
-} */
-
 
 /* ################################################################ */
-/* TESTIMONIALS STYLES */
+/* ###################### TESTIMONIALS STYLES ##################### */
 /* ################################################################ */
 
 @keyframes slideRight {
@@ -488,78 +482,80 @@ header > nav > a:focus {
 }
 
 .testimonials_section {
-    min-height: 49vh;
+	min-height: 49vh;
 }
 
 .testimonials > div > h2 {
-    padding: 0;
+	padding: 0;
 }
 
 .testimonials-outer {
-    position: relative;
-    vertical-align: middle;
+	position: relative;
+	vertical-align: middle;
 	overflow: hidden;
-    white-space: nowrap;
+	white-space: nowrap;
 }
 
-.testimonials-outer::before, .testimonials-outer::after {
-    position: absolute;
-    top: 0;
-    content: "";
-    z-index: 999;
-    width: 25%;
-    height: 100%;
+.testimonials-outer::before,
+.testimonials-outer::after {
+	position: absolute;
+	top: 0;
+	content: "";
+	z-index: 2;
+	width: 25%;
+	height: 100%;
 }
 
 .testimonials-outer::before {
-    left: 0;
-    background: linear-gradient(to left,  hsla(0, 0%, 0%, 0) , hsl(0, 0%, 0%) );
+	left: 0;
+	background: linear-gradient(to left, hsla(0, 0%, 0%, 0), hsl(0, 0%, 0%));
 }
 
 .testimonials-outer::after {
-    right: 0;
-    background: linear-gradient(to right,  hsla(0, 0%, 0%, 0) , hsl(0, 0%, 0%) );
+	right: 0;
+	background: linear-gradient(to right, hsla(0, 0%, 0%, 0), hsl(0, 0%, 0%));
 }
 
 .testimonials-inner {
-    display: inline-block;
+	display: inline-block;
 	animation: 55s slideRight 3.9s infinite linear;
 }
 
 .testimonials-outer:hover .testimonials-inner {
-    animation-play-state: paused;
+	animation-play-state: paused;
 }
 
-.testimonials-inner  img {
-    display: inline-block;
+.testimonials-inner img {
+	display: inline-block;
 	max-height: 100%;
-    max-width: initial;
+	max-width: initial;
 	aspect-ratio: 4/3;
-    margin-inline: 40px;
-    
+	margin-inline: 40px;
+	vertical-align: middle;
 }
-
 
 /* ################################################################ */
-/* CONTACT/FOOTER STYLES */
+/* ##################### CONTACT/FOOTER STYLES #################### */
 /* ################################################################ */
 
 .contact_section {
 	display: flex;
 	align-items: center;
 	justify-content: space-evenly;
+    gap: 5px;
 	background-image: url(../images/barber-chair-salon-hairdresser-previewBW.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
 	margin: 0;
+	color: var(--dm-font-clr);
 }
 
 footer {
-
 }
 
 .Gmap {
+	border: 5px solid var(--brand-primary);
 	border-radius: 10px;
 }
 
@@ -584,8 +580,9 @@ footer {
 }
 
 /* ################################################################ */
-/* SCROLL UP BUTTON STYLES */
+/* ################### SCROLL UP BUTTON STYLES #################### */
 /* ################################################################ */
+
 .scrollUp {
 	display: none;
 	position: fixed;
@@ -593,8 +590,8 @@ footer {
 	line-height: 2.7rem;
 	font-weight: 900;
 	bottom: 70px;
-	right: 7px;
-	z-index: 1000;
+	right: 3vw;
+	z-index: 3;
 }
 
 .scrollUp > a {
@@ -614,14 +611,14 @@ footer {
 }
 
 /* ################################################################ */
-/* GENERALLY APPLIED TAG STYLES */
+/* ################# GENERALLY APPLIED TAG STYLES ################# */
 /* ################################################################ */
 
 h2,
 h1 {
 	font-family: var(--headFont);
 	font-weight: var(--fw-void);
-    line-height: 1.2em;
+	line-height: 1.2em;
 }
 
 h1 {
@@ -651,37 +648,110 @@ p {
 	/* background-color: rgb(53, 10, 61); */
 }
 
-
-
 /* ################################################################ */
-/* Media Q for themes based on system setting */
+/* ########### MEDIA QUERIES FOR USER SELECTED THEMES  ############ */
 /* ################################################################ */
 
-@media (prefers-color-scheme: dark) {
-	body {
-		background-color: var(--dm-bckgrnd-clr);
-		color: var(--dm-font-clr);
-	}
+/* @media (prefers-color-scheme: light) JUST A REMINDER FOR HOW THESE WORK */
+
+/* @media (prefers-color-scheme: dark) JUST A REMINDER FOR HOW THESE WORK */
+
+/* ################################################################ */
+/* #################### THEMES BUTTONS STYLE  ##################### */
+/* ################################################################ */
+
+.theme-BTN-wrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: fixed;
+	z-index: 4;
+	right: 70px;
+	top: 29px;
+	width: 120px;
+	height: 37px;
+	background-color: var(--dm-font-clr);
+	border-radius: 20px;
+	font-size: 2rem;
 }
 
+.theme-BTN-light,
+.theme-BTN-dark {
+	background: none;
+	border: none;
+	padding-inline: 10px;
+}
+
+.theme-BTN-light {
+	color: #da9920;
+}
+
+.theme-BTN-dark {
+	color: #000000;
+}
+
+/* ################################################################ */
+/* LIGHT BODY STYLES */
+/* ################################################################ */
+
 @media (prefers-color-scheme: light) {
+
+	.overlay {
+		border-image: linear-gradient(hsl(0, 0%, 100%), hsla(0, 0%, 0%, 0.37), hsla(0, 0%, 100%, 0.058)) fill 1;
+	}
+
 	body {
 		background-color: var(--lm-bckgrnd-clr);
 		color: var(--lm-font-clr);
 	}
+
+	/* ################################################################ */
+	/* LIGHT HEADER STYLES */
+	/* ################################################################ */
+
+	header {
+		background-color: var(--dm-font-clr);
+	}
+
+	header > nav > a {
+		color: var(--lm-font-clr);
+		font-weight: 500;
+	}
+
+	header > nav > a:hover,
+	header > nav > a:focus {
+		border-bottom: 3px solid rgb(0, 0, 0);
+		text-shadow: 0.025em 0.025em 0 #000000, 0.05em 0.05em 0 var(--brand-primary), 0.075em 0.075em 0 #000000;
+	}
+
+	/* ################################################################ */
+	/* LIGHT SECTION STYLES */
+	/* ################################################################ */
+
+	.shopName {
+		line-height: 1.5;
+		background-color: rgba(0, 0, 0, 0.66);
+		box-shadow: 0 0 19px whitesmoke;
+		border-radius: 30px;
+		padding-inline: 12px;
+	}
+
+	.hero_section > div::before,
+	.hero_section > div::after {
+		border-color: var(--brand-primary);
+	}
+	.shopName::before,
+	.shopName::after {
+		border-color: var(--brand-primary);
+	}
+
+	.prices_flex_div > ul > :nth-child(even) {
+		color: #df7700;
+	}
 }
 
-/* Media Q for themes based on user choice, using a class on body*/
+/* REUSABLE HIDE ELEMENT */
 
-/* @media() {
+.visibly-hidden {
+	display: none;
 }
-body.light-mode {
-	background-color: var(--lm-bckgrnd-clr);
-	color: var(--lm-font-clr);
-}
-
-body.dark-mode {
-	background-color: --dm-bckgrnd-clr;
-	color: var(--dm-font-clr);
-} */
-
