@@ -16,12 +16,12 @@
         <button class="theme-BTN-dark">&#9789;</button>
     </div> -->
     <div class="body-wrapper">
-        <header id="hero">
+        <header id="hero" class="container">
             <a href="#hero">
                 <img src="images/maestro_logo_zoomed_transp_crop.png" alt="business logo and home button" width="150" height="150">
             </a>
-            <nav>
-                <!-- <a href="#">*|||*</a> -->
+            <nav aria-label="Main">
+                <button id="hamburger"aria-expanded="false" aria-label="Menu"></button>
                 <a href="#hero">HOME</a>
                 <a href="#about">ABOUT</a>
                 <a href="#services">SERVICES</a>
@@ -32,38 +32,46 @@
             </nav>
         </header>
         <main>
-            <section class="sections hero_section overlay">
+            <section class="sections hero_section container overlay">
                 <div>
                     <div class="shopName">MAESTRO'S BARBERSHOP</div>
                     <h1 class="hero_h1">DEERFIELD BEACH'S FINEST BARBER SHOP - PRECISION CUTS & STYLING</h1>
                     <a href="#contact" class="hero_BTN">FIND US TODAY</a>
                 </div>
             </section>
-            <section id="about" class="sections about_section">
+            <section id="about" class="sections container about_section">
                 <div class="about_paragraph_wrapper">
                     <h2>ABOUT US</h2>
                     <p>Welcome to Maestro's Barbershop, where style meets precision. Located in the heart of Deerfield Beach, our barbershop is dedicated to providing top-notch grooming services tailored to each client's unique needs. Our team of skilled barbers brings years of experience and a passion for excellence to every haircut, beard trim, and shave. We pride ourselves on creating a relaxed and friendly atmosphere where you can unwind and enjoy a premium grooming experience.</p>
                     <p>Using only the finest grooming products and the latest techniques, we ensure that you leave our barbershop looking and feeling your best. Our welcoming environment and dedication to customer satisfaction make us a favorite among locals and visitors alike. Whether you're looking for a classic cut or the latest trends, Maestro's Barbershop is the place where craftsmanship and style converge.</p>
-
                 </div>
                 <div class="about-image-wrapper">
                     <div class="about_before-after"></div>
                     <img src="images/allef-vinicius-IvQeAVeJULw-unsplash.jpg" loading="lazy" alt="">
                 </div>
             </section>
-            <section id="services" class="sections services_section">
+            <section id="services" class="sections container services_section">
                 <div class="services_image_wrapper">
                     <div class="services_before-after"></div>
                     <img src="images/andrea-donato-MNu0n-3BIKs-unsplash.jpg" width="58%" alt="" loading="lazy">
                 </div>
                 <div class="services_paragraph_wrapper">
                     <h2>OUR SERVICES</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus quisquam dignissimos ad! Error hic pariatur ut, odit, soluta molestiae cupiditate repudiandae accusantium, fugit consectetur qui eligendi modi incidunt eius itaque!</p>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque, omnis quasi. Laboriosam vero harum illo similique ratione, aliquam blanditiis repudiandae commodi? Saepe architecto officiis labore consectetur itaque amet consequuntur hic!</p>
+                    <div class="service_list_wrapper">
+                        <p><span>Scalp Treatments:</span> Treatments for scalp health, massages and exfoliation.</p>
+                        <p><span>Children's Haircuts:</span> Specially catered haircuts for our young clients.</p>
+                        <p><span>Haircuts:</span> Traditional, modern, and trendy styles for boys and men.</p>
+                        <p><span>Hair Coloring:</span> Full color, highlights, lowlights, and grey blending.</p>
+                        <p><span>Eyebrow Grooming:</span> Shaping and trimming for a polished look.</p>
+                        <p><span>Shaves:</span> Classic straight razor shaves and hot towel shaves.</p>
+                        <p><span>Specialty Cuts:</span> Designs and patterns shaved into the hair.</p>
+                        <p><span>Hair Styling:</span> Styling for special occasions or daily wear.</p>
+                        <p><span>Hair Washing:</span> Shampoo and conditioning services.</p>
+                    </div>
                 </div>
             </section>
 
-            <section id="prices" class="sections prices_section">
+            <section id="prices" class="sections container prices_section">
                 <h2>PRICES</h2>
                 <div class="prices_flex_div">
                     <ul>
@@ -96,7 +104,7 @@
                 </div>
             </section>
 
-            <section id="gallery" class="sections gallery_section">
+            <section id="gallery" class="sections container gallery_section">
                 <div>
                     <h2>GALLERY</h2>
                 </div>
@@ -124,7 +132,7 @@
                 </div>
             </section>
 
-            <section id="testimonials" class="sections testimonials_section">
+            <section id="testimonials" class="sections container testimonials_section">
                 <div>
                     <h2>TESTIMONIALS</h2>
                 </div>
@@ -154,12 +162,12 @@
         </main>
 
         <footer>
-            <section id="contact" class="sections contact_section overlay">
+            <section id="contact" class="sections container contact_section overlay">
                 <div>
                     <h2>CONTACT US</h2>
                     <div>PHONE : 999-999-9999</div>
                     <div>EMAIL : example@email.com</div>
-                    <div>ADDRESS : 1111 example road, Hillsborough BLVD, Deerfield Beach, FL, 33333</div>
+                    <div>ADDRESS : 1111 example road, Hillsborough BLVD,<br> Deerfield Beach, FL, 33333</div>
                 </div>
                 <div>
                     <a href="#"><svg class="SocialIcon" xmlns="http://www.w3.org/2000/svg" height="72" width="28" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
