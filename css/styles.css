@@ -110,7 +110,7 @@ textarea {
 	--fs-topper: var(--fs-3);
 	--fs-header: var(--fs-5);
 
-	--fs-paragraphs: 1rem;
+	--fs-paragraphs: clamp(1.04rem, 1.1vw, 1.2rem);
 
 	/* FONT COLOR */
 
@@ -119,7 +119,7 @@ textarea {
 	--brand-secondary: #df7700;
 
 	/* light mode */
-	--lm-bckgrnd-clr: hsla(43, 74%, 49%, 0.2);
+	--lm-bckgrnd-clr: hsl(0, 0%, 100%);
 	--lm-font-clr: #000000;
 
 	/* dark mode */
@@ -149,13 +149,19 @@ textarea {
 }
 
 /* REUSABLE OVERLAY */
-.overlay {
+.overlay-gradient {
 	border-image: linear-gradient(hsl(0, 0%, 0%), hsla(0, 0%, 0%, 0.1)) fill 1;
 }
 
-/* .overlay-light {
-	border-image: linear-gradient(hsl(30, 4%, 10%), hsla(43, 74%, 49%, 0.1)) fill 1;
-} */
+.overlay-linear {
+	border-image: linear-gradient(hsl(0, 0%, 0%, 1), hsla(0, 0%, 0%, 0.5)) fill 1;
+}
+
+/* REUSABLE HIDE ELEMENT */
+
+.visibly-hidden {
+	display: none;
+}
 
 /* ################################################################ */
 /* ######################### BODY STYLES ########################## */
@@ -174,7 +180,6 @@ body {
 
 .body-wrapper {
 	max-width: 2000px;
-	/* background-color: #102a4555; */
 	margin-inline: auto;
 }
 
@@ -231,7 +236,6 @@ header > nav {
 }
 
 header > nav > a {
-	/* background-color: rgb(18, 194, 194); */
 	color: var(--dm-font-clr);
 	font-size: clamp(1rem, 1.5vw, 1.4rem);
 	text-decoration: none;
@@ -260,11 +264,12 @@ header > nav > a:focus {
 
 /* ###################### HERO STYLES ##################### */
 
-.hero_section {
+.hero-section {
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	min-height: calc(100vh - 200px); /* -200px for the header :) */
+	max-height: 100vh;
 	background-color: rgb(7, 0, 46);
 	background-image: url(../images/salah-regouane-cFtUyJS0v20-unsplash.jpg);
 	background-repeat: no-repeat;
@@ -273,19 +278,18 @@ header > nav > a:focus {
 	background-attachment: fixed;
 }
 
-.hero_section > div {
+.hero-section > div {
 	position: relative;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	/* background-color:rgba(37, 6, 66, 0.668); */
 	max-width: 1020px;
 	height: 60vh;
 }
 
-.hero_section > div::before,
-.hero_section > div::after {
+.hero-section > div::before,
+.hero-section > div::after {
 	position: absolute;
 	content: "";
 	width: 130px;
@@ -296,11 +300,11 @@ header > nav > a:focus {
 	top: 0;
 }
 
-.hero_section > div::before {
+.hero-section > div::before {
 	left: 0;
 }
 
-.hero_section > div::after {
+.hero-section > div::after {
 	right: 0;
 	transform: rotate(90deg);
 }
@@ -333,14 +337,14 @@ header > nav > a:focus {
 	transform: rotate(-90deg);
 }
 
-.hero_h1 {
+.hero-h1 {
 	font-size: clamp(2.2rem, 6.4vw, 3.8125rem);
 	font-weight: 500;
 	line-height: 1.45em;
 	text-shadow: 0.025em 0.025em 0 #000000, 0.05em 0.05em 0 var(--brand-secondary), 0.075em 0.075em 0 #000000;
 }
 
-.hero_BTN {
+.hero-BTN {
 	font-size: clamp(1.2rem, 1.9vw, 1.5rem);
 	font-weight: var(--fw-void);
 	background-color: var(--brand-primary);
@@ -352,7 +356,7 @@ header > nav > a:focus {
 	border-radius: 20px;
 }
 
-.hero_BTN:hover {
+.hero-BTN:hover {
 	color: #fff;
 	background-color: var(--brand-secondary);
 	text-shadow: 0.045em 0.045em 2px #000000;
@@ -361,26 +365,25 @@ header > nav > a:focus {
 
 /* ###################### ABOUT STYLES ##################### */
 
-.about_section {
-	/* background-color: #700d0d; */
+.about-section {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	gap: 40px;
+	/* max-height: 100vh; */
 	/* margin-top: -101px; */
 }
 
-.about_paragraph_wrapper {
+.about-paragraph-wrapper {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: space-evenly;
 	flex: 1 1 350px;
-	/* background-color: #2c29ff; */
 	padding-inline-start: 40px;
 }
 
-.about_paragraph > h2 {
+.about-paragraph > h2 {
 	padding-top: 0;
 }
 
@@ -432,13 +435,13 @@ header > nav > a:focus {
 
 /* a div created to hold 2 more pseudo elements (lines) inside this img wrapper */
 
-/* .about_before-after {
+/* .about-before-after {
     position: absolute;
     width: 100%;
     height: 100%;
 }
 
-.about_before-after::before {
+.about-before-after::before {
     position: absolute;
     top: -5%;
     right: 63%;
@@ -451,7 +454,7 @@ header > nav > a:focus {
     border-block: none;
 }
 
-.about_before-after::after {
+.about-before-after::after {
     position: absolute;
     top: -5%;
     right: 59%;
@@ -466,14 +469,14 @@ header > nav > a:focus {
 
 /* ###################### SERVICES STYLES ##################### */
 
-.services_section {
+.services-section {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	gap: 40px;
 }
 
-.services_image_wrapper {
+.services-image-wrapper {
 	position: relative;
 	flex: 2 1 350px;
 	border-radius: 10px;
@@ -482,7 +485,7 @@ header > nav > a:focus {
 	/* border: 1px var(--brand-secondary) solid; */
 }
 
-.services_image_wrapper > img {
+.services-image-wrapper > img {
 	width: 100%;
 	aspect-ratio: 4/3;
 	border-radius: 10px;
@@ -491,7 +494,7 @@ header > nav > a:focus {
 }
 
 /* the img's background */
-.services_image_wrapper::before {
+.services-image-wrapper::before {
 	position: absolute;
 	top: -1%;
 	left: 0;
@@ -506,7 +509,7 @@ header > nav > a:focus {
 }
 
 /* the background lines for style */
-/* .services_image_wrapper::after {
+/* .services-image-wrapper::after {
     position: absolute;
     top: -1%;
     left: 66.7%;
@@ -521,13 +524,13 @@ header > nav > a:focus {
 
 /* a div created to hold 2 more pseudo elements (lines) inside this img wrapper */
 
-/* .services_before-after {
+/* .services-before-after {
     position: absolute;
     width: 100%;
     height: 100%;
 }
 
-.services_before-after::before {
+.services-before-after::before {
     position: absolute;
     top: -1%;
     left: 63.1%;
@@ -540,7 +543,7 @@ header > nav > a:focus {
     border-block: none;
 }
 
-.services_before-after::after {
+.services-before-after::after {
     position: absolute;
     top: -1%;
     left: 59%;
@@ -553,7 +556,7 @@ header > nav > a:focus {
     border-block: none;
 } */
 
-.services_paragraph_wrapper {
+.services-paragraph-wrapper {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -562,36 +565,40 @@ header > nav > a:focus {
 	padding-inline-end: 40px;
 }
 
-
-
-.service_list_wrapper {
+.service-list-wrapper {
 	display: flex;
 	flex-direction: column;
-	align-items: center;
+	align-items: flex-start;
 	justify-content: space-evenly;
 }
 
-.service_list_wrapper > p > span {
+.service-list-wrapper {
+	> p {
+		text-align: left;
+		padding-top: 15px;
+	}
+}
+
+.service-list-wrapper > p > span {
+	font-size: clamp(1.16rem, 1.3vw, 1.4rem);
 	font-weight: 900;
-	color: #da9920;
+	color: var(--brand-secondary);
 }
 
 /* ###################### PRICES STYLES ##################### */
-.prices_section {
+.prices-section > h2 {
+	padding-top: 30px;
+	padding-bottom: 60px;
 }
 
-/* .prices_section > h2 {
-	padding-top: 120px;
-} */
-
-.prices_flex_div {
+.prices-flex-div {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	margin-top: 100px;
+	/* margin-top: 100px; */
 }
 
-.prices_flex_div > ul:nth-of-type(1) {
+.prices-flex-div > ul:nth-of-type(1) {
 	/* background-color: rgb(2, 69, 69); */
 	display: flex;
 	flex-direction: column;
@@ -599,23 +606,28 @@ header > nav > a:focus {
 	align-items: center;
 }
 
-.prices_flex_div > ul:nth-of-type(2) {
+.prices-flex-div > ul:nth-of-type(2) {
 	/* background-color: rgb(2, 69, 69); */
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 }
 
-.prices_flex_div > ul {
+.prices-flex-div > ul {
 	flex: 1 1 auto;
 	list-style: none;
 }
 
-.prices_flex_div > ul > li {
-	padding-bottom: 34px;
+.prices-flex-div > ul > :nth-child(1) {
+	padding-top: 30px;
 }
 
-.prices_flex_div > ul > :nth-child(even) {
+.prices-flex-div > ul > li {
+	padding-bottom: 44px;
+	font-size: var(--fs-paragraphs);
+}
+
+.prices-flex-div > ul > :nth-child(even) {
 	color: var(--brand-primary);
 }
 
@@ -632,13 +644,12 @@ header > nav > a:focus {
 	}
 }
 
-.gallery_section {
+.gallery-section {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-evenly;
 	min-height: 49vh;
 }
-
 
 .gallery-outer {
 	position: relative;
@@ -699,8 +710,8 @@ header > nav > a:focus {
 	}
 }
 
-.testimonials_section {
-    display: flex;
+.testimonials-section {
+	display: flex;
 	flex-direction: column;
 	justify-content: space-evenly;
 	min-height: 49vh;
@@ -759,7 +770,7 @@ header > nav > a:focus {
 /* ##################### CONTACT/FOOTER STYLES #################### */
 /* ################################################################ */
 
-.contact_section {
+.contact-section {
 	display: flex;
 	align-items: center;
 	justify-content: space-evenly;
@@ -772,6 +783,10 @@ header > nav > a:focus {
 }
 
 footer {
+}
+
+.contact-span {
+    color: var(--brand-secondary);
 }
 
 .Gmap {
@@ -831,16 +846,6 @@ footer {
 	text-shadow: 0.025em 0.025em 0 #000000, 0.04em 0.04em 0 var(--brand-primary), 0.05em 0.05em 0 #ffffff;
 }
 
-
-
-/* ################################################################ */
-/* ########### MEDIA QUERIES FOR USER SELECTED THEMES  ############ */
-/* ################################################################ */
-
-/* @media (prefers-color-scheme: light) JUST A REMINDER FOR HOW THESE WORK */
-
-/* @media (prefers-color-scheme: dark) JUST A REMINDER FOR HOW THESE WORK */
-
 /* ################################################################ */
 /* #################### THEMES BUTTONS STYLE  ##################### */
 /* ################################################################ */
@@ -876,12 +881,20 @@ footer {
 }
 
 /* ################################################################ */
+/* ########### MEDIA QUERIES FOR USER SELECTED THEMES  ############ */
+/* ################################################################ */
+
+/* ################################################################ */
 /* LIGHT BODY STYLES */
 /* ################################################################ */
 
 @media (prefers-color-scheme: light) {
-	.overlay {
-		border-image: linear-gradient(hsl(0, 0%, 100%), hsla(0, 0%, 24%, 0.37), hsla(0, 0%, 24%, 0.27), hsla(0, 0%, 100%, 0.17)) fill 1;
+	.overlay-gradient {
+		border-image: linear-gradient(hsl(0, 0%, 100%), hsla(0, 0%, 100%, 0.3), hsla(0, 0%, 100%, 0.1), hsla(0, 0%, 100%, 0)) fill 1;
+	}
+
+	.overlay-linear {
+		border-image: linear-gradient(hsl(0, 0%, 100%, 1), hsla(0, 0%, 100%, 0.1)) fill 1;
 	}
 
 	body {
@@ -913,31 +926,29 @@ footer {
 	/* ################################################################ */
 
 	.shopName {
-		line-height: 1.5;
-		background-color: rgba(0, 0, 0, 0.66);
-		box-shadow: 0 0 19px whitesmoke;
+		/* line-height: 1.5; */
+		background-color: rgba(0, 0, 0, 0.845);
+		box-shadow: 0 0 19px rgb(0, 0, 0);
 		border-radius: 30px;
-		padding-inline: 12px;
+		padding-inline: 22px;
 	}
 
-	.hero_section > div::before,
-	.hero_section > div::after {
-		border-color: var(--brand-primary);
+	.hero-section > div::before,
+	.hero-section > div::after {
+		border-color: var(--lm-font-clr);
 	}
 	.shopName::before,
 	.shopName::after {
-		border-color: var(--brand-primary);
+		border-color: var(--lm-font-clr);
 	}
 
-	.prices_flex_div > ul > :nth-child(even) {
+	.prices-flex-div > ul > :nth-child(even) {
 		color: #df7700;
 	}
-}
 
-/* REUSABLE HIDE ELEMENT */
-
-.visibly-hidden {
-	display: none;
+    .footer-paragraphs {
+        color: var(--lm-font-clr);
+    }
 }
 
 /* ################################################################ */
@@ -963,9 +974,71 @@ footer {
 		max-width: 1024px;
 	}
 
-    h2 {
-        padding-bottom: 10px;
-    }
+	h2 {
+		padding-bottom: 10px;
+	}
+
+	/* ###################### SERVICES STYLES ##################### */
+	.services-section {
+		background-color: #0d0124;
+		background-image: url(/images/jason-leung-2seUdPQNy_I-unsplash.jpg);
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+		background-attachment: fixed;
+		/* display: flex; */
+		flex-direction: column;
+		border-image: linear-gradient(hsl(0, 0%, 0%), hsla(0, 0%, 0%, 0.4)) fill 1;
+	}
+
+	.services-paragraph-wrapper {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-evenly;
+		flex: initial;
+		padding-inline: 0;
+	}
+
+	.services-paragraph-wrapper > h2 {
+		padding-top: 30px;
+		padding-bottom: 10px;
+	}
+
+	.service-list-wrapper > p {
+		padding-block: 31.7px;
+	}
+
+	.services-image-wrapper {
+		display: none;
+		/* width: 100%; */
+	}
+
+	.services-image-wrapper > img {
+		display: none;
+	}
+
+	/* the img's background */
+	.services-image-wrapper::before {
+		display: none;
+	}
+
+	@media (prefers-color-scheme: light) {
+		.services-section {
+			background-color: #ffffff;
+			border-image: linear-gradient(hsl(0, 0%, 100%), hsla(0, 0%, 100%, 0.9), hsla(0, 0%, 100%, 0.8), hsla(0, 0%, 100%, 0.7), hsla(0, 0%, 100%, 0.6)) fill 1;
+		}
+	}
+
+	/* ###################### PRICES STYLES ##################### */
+
+	.prices-section > h2 {
+		padding-bottom: 40px;
+	}
+
+	.prices-flex-div li {
+		padding-bottom: 85px;
+	}
 }
 
 /* lg */
@@ -974,60 +1047,47 @@ footer {
 		max-width: 768px;
 	}
 
-    
-
 	/* ###################### ABOUT STYLES ##################### */
 
-	.about_section {
+	.about-section {
 		/* background-color: #0d0124; */
-        flex-direction: column;
+		flex-direction: column;
 	}
 
-	.about_paragraph_wrapper {
+	.about-paragraph-wrapper {
 		padding-inline-start: 0px;
 	}
 
-    .about_paragraph_wrapper > h2 {
-        padding-top: 30px;
-    }
-
-	.about-image-wrapper {
-		width: 100%;
+	.about-paragraph-wrapper > h2 {
+		padding-top: 30px;
 	}
 
+	.about-paragraph-wrapper > p {
+		padding-top: 15px;
+	}
+
+	.about-image-wrapper {
+		width: 87%;
+	}
+
+	.about-image-wrapper > img {
+		border-radius: 19px;
+	}
 	/* the img's background */
 	.about-image-wrapper::before {
 		display: none;
 	}
 
-    /* ###################### SERVICES STYLES ##################### */
-    .services_section {
-		background-color: #0d0124;
-		/* display: flex; */
-        flex-direction: column;
+	/* ###################### FOOTER STYLES ##################### */
+	.contact-section {
+		flex-direction: column;
+		gap: 25px;
 	}
 
-	.services_paragraph_wrapper {
-		padding-inline: 0;
-	}
-
-    .services_paragraph_wrapper > h2 {
-        padding-top: 30px;
+    .social-media {
+        display: flex;
+        gap: 14vw;
     }
-
-	.services_image_wrapper {
-        display: none;
-		/* width: 100%; */
-	}
-
-    .services_image_wrapper > img {
-        display: none;
-    }
-
-	/* the img's background */
-	.services-image-wrapper::before {
-		display: none;
-	}
 }
 
 /* md */
@@ -1046,7 +1106,31 @@ footer {
 	.container {
 		max-width: 475px;
 	}
+
+    /* ###################### ABOUT STYLES ##################### */
+	.about-image-wrapper {
+		width: 100%;
+	}
+
+    /* ###################### SERVICES STYLES ##################### */
+	.service-list-wrapper {
+		& > p {
+			padding-top: 13px;
+		}
+	}
+
+    /* ###################### FOOTER STYLES ##################### */
+	.contact-section {
+		flex-direction: column;
+		gap: 25px;
+	}
+
+    .Gmap{
+        width: 77vw;
+        height: 55vw;
+    }
 }
+
 
 /* xs */
 @media (max-width: 475px) {
