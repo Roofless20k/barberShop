@@ -268,7 +268,7 @@ header > nav > a:focus {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	min-height: calc(100vh - 200px); /* -200px for the header :) */
+	min-height: calc(100svh - 200px); /* -200px for the header :) */
 	max-height: 100vh;
 	background-color: rgb(7, 0, 46);
 	background-image: url(../images/salah-regouane-cFtUyJS0v20-unsplash.jpg);
