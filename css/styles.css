@@ -176,6 +176,7 @@ body {
 	letter-spacing: 0.03em;
 	margin-inline: auto;
 	text-align: center;
+    overflow-x: none;
 }
 
 .body-wrapper {
@@ -392,7 +393,6 @@ header > nav > a:focus {
 	border-radius: 10px;
 	aspect-ratio: 4/3;
 	max-width: 1000px;
-	/* border: 1px var(--brand-secondary) solid; */
 }
 
 .about-image-wrapper > img {
@@ -1001,7 +1001,7 @@ footer {
 
 	.services-paragraph-wrapper > h2 {
 		padding-top: 30px;
-		padding-bottom: 10px;
+		padding-bottom: 30px;
 	}
 
 	.service-list-wrapper > p {
@@ -1030,6 +1030,9 @@ footer {
 	}
 
 	/* ###################### PRICES STYLES ##################### */
+    .prices-section {
+        padding-top: 50px;
+    }
 
 	.prices-section > h2 {
 		padding-bottom: 40px;
@@ -1049,6 +1052,7 @@ footer {
 	/* ###################### ABOUT STYLES ##################### */
 	.hero-section {
 		background-attachment: initial;
+		margin-block-end: 50px;
 	}
 
 	/* ###################### ABOUT STYLES ##################### */
@@ -1072,6 +1076,8 @@ footer {
 
 	.about-image-wrapper {
 		width: 87%;
+		flex: 0;
+		margin-block-end: 50px;
 	}
 
 	.about-image-wrapper > img {
