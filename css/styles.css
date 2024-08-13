@@ -785,7 +785,7 @@ footer {
 }
 
 .contact-span {
-    color: var(--brand-secondary);
+	color: var(--brand-secondary);
 }
 
 .Gmap {
@@ -945,9 +945,9 @@ footer {
 		color: #df7700;
 	}
 
-    .footer-paragraphs {
-        color: var(--lm-font-clr);
-    }
+	.footer-paragraphs {
+		color: var(--lm-font-clr);
+	}
 }
 
 /* ################################################################ */
@@ -1047,6 +1047,11 @@ footer {
 	}
 
 	/* ###################### ABOUT STYLES ##################### */
+	.hero-section {
+		background-attachment: initial;
+	}
+
+	/* ###################### ABOUT STYLES ##################### */
 
 	.about-section {
 		/* background-color: #0d0124; */
@@ -1083,10 +1088,10 @@ footer {
 		gap: 25px;
 	}
 
-    .social-media {
-        display: flex;
-        gap: 14vw;
-    }
+	.social-media {
+		display: flex;
+		gap: 14vw;
+	}
 }
 
 /* md */
@@ -1106,30 +1111,29 @@ footer {
 		max-width: 475px;
 	}
 
-    /* ###################### ABOUT STYLES ##################### */
+	/* ###################### ABOUT STYLES ##################### */
 	.about-image-wrapper {
 		width: 100%;
 	}
 
-    /* ###################### SERVICES STYLES ##################### */
+	/* ###################### SERVICES STYLES ##################### */
 	.service-list-wrapper {
 		& > p {
 			padding-top: 13px;
 		}
 	}
 
-    /* ###################### FOOTER STYLES ##################### */
+	/* ###################### FOOTER STYLES ##################### */
 	.contact-section {
 		flex-direction: column;
 		gap: 25px;
 	}
 
-    .Gmap{
-        width: 77vw;
-        height: 55vw;
-    }
+	.Gmap {
+		width: 77vw;
+		height: 55vw;
+	}
 }
-
 
 /* xs */
 @media (max-width: 475px) {
