@@ -208,8 +208,6 @@ p {
 	font-size: var(--fs-paragraphs);
 }
 
-
-
 /* ################################################################ */
 /* ######################### HEADER STYLES ######################## */
 /* ################################################################ */
@@ -348,7 +346,7 @@ header > nav > a:focus {
 	border-radius: 20px;
 }
 
-.hero-BTN:hover {
+.hero-BTN:hover, .hero-BTN:focus  {
 	color: #fff;
 	background-color: var(--brand-secondary);
 	text-shadow: 0.045em 0.045em 2px #000000;
@@ -792,7 +790,7 @@ footer {
 	padding: 1px;
 }
 
-.SocialIcon:hover {
+.SocialIcon:hover, .SocialIcon:focus {
 	border-bottom: 6px solid rgb(255, 255, 255);
 	border-left: 3px solid rgb(255, 255, 255);
 	border-right: 3px solid rgb(255, 255, 255);
@@ -828,7 +826,7 @@ footer {
 	border-radius: 15px;
 }
 
-.scrollUp > a:hover {
+.scrollUp > a:hover, .scrollUp > a:focus {
 	color: #ffffff;
 	background-color: var(--brand-primary);
 	text-shadow: 0.025em 0.025em 0 #000000, 0.04em 0.04em 0 var(--brand-primary), 0.05em 0.05em 0 #ffffff;
@@ -968,8 +966,8 @@ footer {
 
 	/* ###################### SERVICES STYLES ##################### */
 	.services-section {
-        flex-direction: column;
-        gap: 0;
+		flex-direction: column;
+		gap: 0;
 		background-color: #0d0124;
 		background-image: url(/images/jason-leung-2seUdPQNy_I-unsplash.jpg);
 		background-repeat: no-repeat;
@@ -977,14 +975,14 @@ footer {
 		background-position: center;
 		background-attachment: fixed;
 		border-image: linear-gradient(hsl(0, 0%, 0%), hsla(0, 0%, 0%, 0.4)) fill 1;
-        min-height: 100svh; /* setting height to less than 100vh*/
+		min-height: 100svh; /* setting height to less than 100vh*/
 	}
 
 	.services-paragraph-wrapper {
 		flex: initial;
-        height: 100svh;
-        padding-inline-end: 0;
-        justify-content: normal;
+		height: 100svh;
+		padding-inline-end: 0;
+		justify-content: normal;
 	}
 
 	.services-paragraph-wrapper > h2 {
@@ -992,9 +990,9 @@ footer {
 		padding-bottom: 0px;
 	}
 
-	.service-list-wrapper  {
+	.service-list-wrapper {
 		justify-content: space-evenly;
-        height: inherit;
+		height: inherit;
 	}
 
 	.services-image-wrapper {
@@ -1094,12 +1092,13 @@ footer {
 		max-width: 640px;
 	}
 
-	header > nav {
+	.desktop-menu {
 		display: none;
 	}
+    
 
-    .service-list-wrapper > p {
-		padding-block: .5vh;
+	.service-list-wrapper > p {
+		padding-block: 0.5vh;
 	}
 }
 
@@ -1140,8 +1139,6 @@ footer {
 	}
 }
 
-
-
 /* temp style to differentiate different sections on the site */
 
 .sections:nth-child(even) {
@@ -1150,4 +1147,41 @@ footer {
 
 .sections:nth-child(odd) {
 	/* background-color: rgb(53, 10, 61); */
+}
+
+.hamburger-menu {
+    display: flex;
+    gap: 16px;
+	font-size: clamp(1.2rem, 1.9vw, 1.5rem);
+	font-weight: var(--fw-void);
+	background-color:#000000;
+    color: #fff;
+	/* text-shadow: 0.045em 0.045em 0 #ffffff; */
+	padding-inline: 20px;
+	padding-block: 15px;
+	text-decoration: none;
+	border-radius: 20px;
+    border: 2px solid #fff;
+
+    &:hover, &:focus {
+        background-color: hsl(0, 0%, 9%);
+    }
+}
+
+.hamburger-menu-flipper {
+    /* display: block; */
+    background-color: var(--brand-secondary);
+    padding-block-start: 3px;
+    padding-block-end: 8px;
+    padding-inline-end: 8px;
+    translate: 0 -2px;
+    rotate: 90deg;
+    letter-spacing: -7px;
+    border-radius: 5px;
+}
+
+@media (min-width: 767px) {
+    .hamburger-menu {
+        display: none;
+    }
 }
