@@ -1176,7 +1176,7 @@ footer {
     padding-inline-end: 8px;
     translate: 0 -2px;
     rotate: 90deg;
-    letter-spacing: -5px;
+    /* letter-spacing: -5px; */
     border-radius: 5px;
 }
 
