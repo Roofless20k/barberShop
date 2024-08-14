@@ -1176,11 +1176,11 @@ footer {
     padding-inline-end: 8px;
     translate: 0 -2px;
     rotate: 90deg;
-    letter-spacing: -7px;
+    letter-spacing: -5px;
     border-radius: 5px;
 }
 
-@media (min-width: 767px) {
+@media (min-width: 769px) {
     .hamburger-menu {
         display: none;
     }
