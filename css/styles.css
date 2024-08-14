@@ -616,7 +616,7 @@ header > nav > a:focus {
 }
 
 .prices-flex-div > ul > :nth-child(even) {
-	color: var(--brand-primary);
+	color: var(--brand-secondary);
 }
 
 /* ################################################################ */
@@ -636,7 +636,7 @@ header > nav > a:focus {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-evenly;
-	min-height: 463.5px;
+	min-height: 50svh;
 }
 
 .gallery-outer {
@@ -702,7 +702,7 @@ header > nav > a:focus {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-evenly;
-	min-height: 463.5px;
+	min-height: 50svh;
 }
 
 .testimonials > div > h2 {
@@ -977,25 +977,24 @@ footer {
 		background-position: center;
 		background-attachment: fixed;
 		border-image: linear-gradient(hsl(0, 0%, 0%), hsla(0, 0%, 0%, 0.4)) fill 1;
-        min-height: fit-content; /* setting height to less than 100vh*/
+        min-height: 100svh; /* setting height to less than 100vh*/
 	}
 
 	.services-paragraph-wrapper {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: space-evenly;
 		flex: initial;
-		padding-inline: 0;
+        height: 100svh;
+        padding-inline-end: 0;
+        justify-content: normal;
 	}
 
 	.services-paragraph-wrapper > h2 {
 		padding-top: 30px;
-		padding-bottom: 30px;
+		padding-bottom: 0px;
 	}
 
-	.service-list-wrapper > p {
-		padding-block: 20px;
+	.service-list-wrapper  {
+		justify-content: space-evenly;
+        height: inherit;
 	}
 
 	.services-image-wrapper {
@@ -1098,6 +1097,10 @@ footer {
 	header > nav {
 		display: none;
 	}
+
+    .service-list-wrapper > p {
+		padding-block: .5vh;
+	}
 }
 
 /* sm */
@@ -1114,7 +1117,7 @@ footer {
 	/* ###################### SERVICES STYLES ##################### */
 	.service-list-wrapper {
 		& > p {
-			padding-top: 13px;
+			/* padding-top: 13px; */
 		}
 	}
 
