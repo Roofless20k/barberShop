@@ -1172,8 +1172,8 @@ footer {
     /* display: block; */
     background-color: var(--brand-secondary);
     padding-block-start: 3px;
-    padding-block-end: 8px;
-    padding-inline-end: 8px;
+    padding-block-end: 7px;
+    padding-inline-end: 1px;
     translate: 0 -2px;
     rotate: 90deg;
     /* letter-spacing: -5px; */
