@@ -208,15 +208,7 @@ p {
 	font-size: var(--fs-paragraphs);
 }
 
-/* temp style to differentiate different sections on the site */
 
-.sections:nth-child(even) {
-	/* background-color: rgb(11, 97, 151); */
-}
-
-.sections:nth-child(odd) {
-	/* background-color: rgb(53, 10, 61); */
-}
 
 /* ################################################################ */
 /* ######################### HEADER STYLES ######################## */
@@ -976,15 +968,16 @@ footer {
 
 	/* ###################### SERVICES STYLES ##################### */
 	.services-section {
+        flex-direction: column;
+        gap: 0;
 		background-color: #0d0124;
 		background-image: url(/images/jason-leung-2seUdPQNy_I-unsplash.jpg);
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-position: center;
 		background-attachment: fixed;
-		/* display: flex; */
-		flex-direction: column;
 		border-image: linear-gradient(hsl(0, 0%, 0%), hsla(0, 0%, 0%, 0.4)) fill 1;
+        min-height: fit-content; /* setting height to less than 100vh*/
 	}
 
 	.services-paragraph-wrapper {
@@ -1002,12 +995,11 @@ footer {
 	}
 
 	.service-list-wrapper > p {
-		padding-block: 31.7px;
+		padding-block: 20px;
 	}
 
 	.services-image-wrapper {
 		display: none;
-		/* width: 100%; */
 	}
 
 	.services-image-wrapper > img {
@@ -1143,4 +1135,16 @@ footer {
 	.container {
 		width: 100%;
 	}
+}
+
+
+
+/* temp style to differentiate different sections on the site */
+
+.sections:nth-child(even) {
+	/* background-color: rgb(11, 97, 151); */
+}
+
+.sections:nth-child(odd) {
+	/* background-color: rgb(53, 10, 61); */
 }
