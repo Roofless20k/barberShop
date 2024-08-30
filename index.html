@@ -21,7 +21,26 @@
                 <img src="images/maestro_logo_zoomed_transp_crop.png" alt="business logo and home button" width="150" height="150">
             </a>
             <nav aria-label="Main">
-                <button id="hamburger" class="hamburger-menu" aria-expanded="false">Menu <span class="hamburger-menu-flipper" aria-hidden="true">|||</span></button>
+                <button id="hamburger" class="hamburger-menu-background" aria-expanded="false">Menu
+                    <span id="flipper" class="hamburger-menu-flipper" aria-hidden="true">
+                        <svg viewBox="0 0 100 80" width="40" height="40">
+                            <rect width="100" height="20" rx="8"></rect>
+                            <rect y="30" width="100" height="20" rx="8"></rect>
+                            <rect y="60" width="100" height="20" rx="8"></rect>
+                        </svg>
+                    </span>
+                </button>
+                <div id="hamburger-menu" class="mobile-menu-items-wrapper invisible">
+                    <div >
+                        <a href="#hero" class="mobile-menu-items">HOME</a>
+                        <a href="#about" class="mobile-menu-items">ABOUT</a>
+                        <a href="#services" class="mobile-menu-items">SERVICES</a>
+                        <a href="#prices" class="mobile-menu-items">PRICES</a>
+                        <a href="#gallery" class="mobile-menu-items">GALLERY</a>
+                        <a href="#testimonials" class="mobile-menu-items">TESTIMONIALS</a>
+                        <a href="#contact" class="mobile-menu-items">CONTACT</a>
+                    </div>
+                </div>
                 <a href="#hero" class="desktop-menu">HOME</a>
                 <a href="#about" class="desktop-menu">ABOUT</a>
                 <a href="#services" class="desktop-menu">SERVICES</a>
