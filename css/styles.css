@@ -693,9 +693,12 @@ header > nav > a:focus {
 /* ################################################################ */
 /* ###################### TESTIMONIALS STYLES ##################### */
 /* ################################################################ */
+.testimonials-section {
+    max-height: 60vh;
+}
 
 .testimonials-section > h2 {
-    padding-top: 60px;
+    padding: 60px 0;
 }
 
 .user-testimonial-parent{
@@ -709,6 +712,7 @@ header > nav > a:focus {
     background-color: hsla(0, 0%, 15%, 0.349);
     margin: 10px;
     padding: 10px;
+    border: 1px white solid;
     border-radius: 10px;
 }
 
@@ -729,6 +733,7 @@ header > nav > a:focus {
 .testimonial-usernames {
     font-size: 1.67rem;
     line-height: 2.7em;
+    color: #df7700;
 }
 
 .testimonial-stars {
@@ -822,6 +827,13 @@ header > nav > a:focus {
 	background-position: center;
 	color: var(--dm-font-clr);
 }
+
+/* .social-media {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 300px;
+} */
 
 footer {
 }
@@ -1156,6 +1168,27 @@ footer {
 	.service-list-wrapper > p {
 		padding-block: 0.5vh;
 	}
+
+    .testimonials-section {
+        max-height: 100%;
+    }
+    
+    .testimonials-section > h2 {
+    }
+    
+    .user-testimonial-parent{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        padding-top: 15px;
+    }
+    
+    .user-testimonial-children {
+        background-color: hsla(0, 0%, 15%, 0.349);
+        margin: 10px;
+        padding: 10px;
+        border-radius: 10px;
+    }
 }
 
 /* sm */
