@@ -9,6 +9,7 @@
 	],
 	"settings": {
 		"liveServer.settings.multiRootWorkspaceName": "barberShop",
-		"cSpell.words": ["adipisicing", "lowlights"]
+		"cSpell.words": ["adipisicing", "lowlights"],
+		"liveServer.settings.port": 5501
 	}
 }

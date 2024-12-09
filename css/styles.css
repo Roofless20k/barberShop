@@ -576,6 +576,12 @@ header > nav > a:focus {
 }
 
 /* ###################### PRICES STYLES ##################### */
+.prices-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .prices-section > h2 {
 	padding-top: 30px;
 	padding-bottom: 60px;
@@ -688,7 +694,55 @@ header > nav > a:focus {
 /* ###################### TESTIMONIALS STYLES ##################### */
 /* ################################################################ */
 
-@keyframes slideRight {
+.testimonials-section > h2 {
+    padding-top: 60px;
+}
+
+.user-testimonial-parent{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-top: 15px;
+}
+
+.user-testimonial-children {
+    background-color: hsla(0, 0%, 15%, 0.349);
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.testimonial-images-wrapper {
+    /* border-radius: 50%; */
+    /* width: 300px;
+    height: 300px; */
+    /* background-color: aquamarine; */
+}
+
+.testimonial-user-images {
+    margin: 0 auto;
+    border-radius: 50%;
+    min-height: 130px;
+    
+}
+
+.testimonial-usernames {
+    font-size: 1.67rem;
+    line-height: 2.7em;
+}
+
+.testimonial-stars {
+    display: block;
+    font-size: 3rem;
+    color: #da9920;
+    line-height: 3.5rem;
+}
+
+.testimonial-paragraphs {
+
+}
+
+/* @keyframes slideRight {
 	from {
 		transform: translateX(0);
 	}
@@ -751,7 +805,7 @@ header > nav > a:focus {
 	aspect-ratio: 4/3;
 	margin-inline: 40px;
 	vertical-align: middle;
-}
+} */
 
 /* ################################################################ */
 /* ##################### CONTACT/FOOTER STYLES #################### */
@@ -1164,17 +1218,21 @@ footer {
 	font-weight: var(--fw-void);
 	background-color: #000000;
 	color: #fff;
-	/* text-shadow: 0.045em 0.045em 0 #ffffff; */
 	padding-inline: 20px;
 	padding-block: 15px;
 	text-decoration: none;
 	border-radius: 20px;
-	border: 1px solid #fff;
-	position: relative;
 
 	&:hover,
 	&:focus {
 		background-color: hsl(0, 0%, 9%);
+	}
+
+	&:focus-visible {
+		outline: 4px blue solid;
+		outline-offset: 3px;
+		color: #000;
+		background-color: #fff;
 	}
 }
 
@@ -1187,7 +1245,7 @@ footer {
     translate: 0 -2px;
     rotate: 90deg; */
 	/* letter-spacing: -5px; */
-	border-radius: 15px;
+	border-radius: 5px;
 }
 
 @media (min-width: 769px) {
@@ -1228,9 +1286,14 @@ footer {
 	border-radius: 10px;
 	border: 1px solid rgba(255, 255, 255, 0.18);
 
-	&:hover {
+	&:hover,
+	&:focus {
 		color: var(--brand-secondary);
 		background-color: rgb(255, 255, 255);
+	}
+
+	&:focus {
+		border: 2px blue solid;
 	}
 }
 
