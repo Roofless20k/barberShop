@@ -694,7 +694,9 @@ header > nav > a:focus {
 /* ###################### TESTIMONIALS STYLES ##################### */
 /* ################################################################ */
 .testimonials-section {
-    max-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    min-height: auto;
 }
 
 .testimonials-section > h2 {
