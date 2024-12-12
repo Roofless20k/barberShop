@@ -219,6 +219,12 @@ header {
 	height: 150px;
 }
 
+.brand-logo-header {
+    width: 140px;
+    height: 140px;
+    padding: 3px;
+}
+
 header > nav {
 	display: flex;
 	align-items: center;
@@ -576,9 +582,9 @@ header > nav > a:focus-visible {
 
 /* ###################### PRICES STYLES ##################### */
 .prices-section {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
 
 .prices-section > h2 {
@@ -628,7 +634,7 @@ header > nav > a:focus-visible {
 /* ################################################################ */
 
 .gallery-section h2 {
-    padding-block: 60px;
+	padding-block: 60px;
 }
 
 @keyframes slideLeft {
@@ -691,66 +697,64 @@ header > nav > a:focus-visible {
 	aspect-ratio: 4/3;
 	margin-inline: 40px;
 	vertical-align: middle;
-    width: 625px;
+	width: 625px;
 }
 
 /* ################################################################ */
 /* ###################### TESTIMONIALS STYLES ##################### */
 /* ################################################################ */
 .testimonials-section {
-    display: flex;
-    flex-direction: column;
-    min-height: auto;
+	display: flex;
+	flex-direction: column;
+	min-height: auto;
 }
 
 .testimonials-section > h2 {
-    padding: 60px 0;
+	padding: 60px 0;
 }
 
-.user-testimonial-parent{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    padding-top: 15px;
+.user-testimonial-parent {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	padding-top: 15px;
 }
 
 .user-testimonial-children {
-    background-color: hsla(0, 0%, 15%, 0.349);
-    margin: 10px;
-    padding: 10px;
-    border: 1px white solid;
-    border-radius: 10px;
+	background-color: hsla(0, 0%, 15%, 0.349);
+	margin: 10px;
+	padding: 10px;
+	border: 1px white solid;
+	border-radius: 10px;
 }
 
 .testimonial-images-wrapper {
-    /* border-radius: 50%; */
-    /* width: 300px;
+	/* border-radius: 50%; */
+	/* width: 300px;
     height: 300px; */
-    /* background-color: aquamarine; */
+	/* background-color: aquamarine; */
 }
 
 .testimonial-user-images {
-    margin: 0 auto;
-    border-radius: 50%;
-    min-height: 130px;
-    
+	margin: 0 auto;
+	border-radius: 50%;
+	min-height: 130px;
 }
 
 .testimonial-usernames {
-    font-size: 1.67rem;
-    line-height: 2.7em;
-    color: #df7700;
+	font-size: 1.67rem;
+	line-height: 2.7em;
+	color: #df7700;
 }
 
 .testimonial-stars {
-    display: block;
-    font-size: 3rem;
-    color: #da9920;
-    line-height: 3.5rem;
+	display: block;
+	font-size: 3rem;
+	color: #da9920;
+	line-height: 3.5rem;
 }
 
 .testimonial-paragraphs {
-
 }
 
 /* @keyframes slideRight {
@@ -841,7 +845,6 @@ header > nav > a:focus-visible {
     height: 300px;
 } */
 
-
 .contact-span {
 	color: var(--brand-secondary);
 }
@@ -866,13 +869,11 @@ header > nav > a:focus-visible {
 	border-left: 5px solid rgb(255, 255, 255);
 	border-right: 5px solid rgb(255, 255, 255);
 	transform: translateY(-4.6px);
-    background-color: #df7700;
+	background-color: #df7700;
 	transition-duration: 280ms;
 	transition-property: background-color, transform;
 	transition-timing-function: ease-out;
 }
-
-
 
 /* ################################################################ */
 /* ################### SCROLL UP BUTTON STYLES #################### */
@@ -889,18 +890,16 @@ header > nav > a:focus-visible {
 	z-index: 3;
 }
 
-
-
 .scrollUp > a {
 	background-color: var(--brand-primary);
 	color: white;
 	text-shadow: 0.015em 0.015em 0 #000000, 0.025em 0.025em 0 var(--brand-primary), 0.045em 0.045em 0 #000000;
 	padding-inline: 12px;
 	padding-block: 5px;
-    margin-right: 8px;
+	margin-right: 8px;
 	text-decoration: none;
 	border-radius: 25px;
-    font-size: 2.8rem;
+	font-size: 2.8rem;
 }
 
 .scrollUp > a:hover,
@@ -952,7 +951,7 @@ header > nav > a:focus-visible {
 /* LIGHT BODY STYLES */
 /* ################################################################ */
 
-@media (prefers-color-scheme: light) {
+/* @media (prefers-color-scheme: light) {
 	.overlay-gradient {
 		border-image: linear-gradient(hsl(0, 0%, 100%), hsla(0, 0%, 100%, 0.3), hsla(0, 0%, 100%, 0.1), hsla(0, 0%, 100%, 0)) fill 1;
 	}
@@ -964,13 +963,13 @@ header > nav > a:focus-visible {
 	body {
 		background-color: var(--lm-bckgrnd-clr);
 		color: var(--lm-font-clr);
-	}
+	} */
 
 	/* ################################################################ */
 	/* LIGHT HEADER STYLES */
 	/* ################################################################ */
 
-	header {
+	/* header {
 		background-color: var(--dm-font-clr);
 	}
 
@@ -983,14 +982,13 @@ header > nav > a:focus-visible {
 	header > nav > a:focus {
 		border-bottom: 3px solid var(--brand-primary);
 		text-shadow: 0.025em 0.025em 0 #000000, 0.05em 0.05em 0 var(--brand-primary), 0.075em 0.075em 0 #000000;
-	}
+	} */
 
 	/* ################################################################ */
 	/* LIGHT SECTION STYLES */
 	/* ################################################################ */
 
-	.shopName {
-		/* line-height: 1.5; */
+	/* .shopName {
 		background-color: rgba(0, 0, 0, 0.845);
 		box-shadow: 0 0 19px rgb(0, 0, 0);
 		border-radius: 30px;
@@ -1013,7 +1011,7 @@ header > nav > a:focus-visible {
 	.footer-paragraphs {
 		color: var(--lm-font-clr);
 	}
-}
+} */
 
 /* ################################################################ */
 /* ####################### MEDIA QUERIES  ######################### */
@@ -1152,6 +1150,15 @@ header > nav > a:focus-visible {
 		display: none;
 	}
 
+    .gallery-section {
+        min-height: 46svh;
+        padding-bottom: 60px;
+    }
+
+    .gallery-inner img {
+		width: 425px;
+	}
+
 	/* ###################### FOOTER STYLES ##################### */
 	.contact-section {
 		flex-direction: column;
@@ -1177,27 +1184,33 @@ header > nav > a:focus-visible {
 	.service-list-wrapper > p {
 		padding-block: 0.5vh;
 	}
+    
+    .gallery-section {
+        min-height: 40svh;
+        padding-bottom: 60px;
+    }
 
-    .testimonials-section {
-        max-height: 100%;
-    }
-    
-    .testimonials-section > h2 {
-    }
-    
-    .user-testimonial-parent{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        padding-top: 15px;
-    }
-    
-    .user-testimonial-children {
-        background-color: hsla(0, 0%, 15%, 0.349);
-        margin: 10px;
-        padding: 10px;
-        border-radius: 10px;
-    }
+	.gallery-inner img {
+		width: 325px;
+	}
+
+	.testimonials-section {
+		max-height: 100%;
+	}
+
+	.user-testimonial-parent {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-evenly;
+		padding-top: 15px;
+	}
+
+	.user-testimonial-children {
+		background-color: hsla(0, 0%, 15%, 0.349);
+		margin: 10px;
+		padding: 10px;
+		border-radius: 10px;
+	}
 }
 
 /* sm */
@@ -1263,8 +1276,7 @@ header > nav > a:focus-visible {
 	padding-inline: 20px;
 	padding-block: 15px;
 	text-decoration: none;
-    border: none;
-	
+	border: none;
 
 	&:hover,
 	&:focus {
