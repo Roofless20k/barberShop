@@ -5,6 +5,7 @@
 *::before,
 *::after {
 	box-sizing: border-box;
+    /* outline: 2px solid lime; */
 }
 
 /* remove default spacing */
@@ -217,6 +218,10 @@ header {
 	align-items: center;
 	justify-content: space-between;
 	height: 150px;
+}
+
+.higher-specificity-header {
+    padding-inline: 15px;
 }
 
 .brand-logo-header {
