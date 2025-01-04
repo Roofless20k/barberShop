@@ -227,8 +227,8 @@ header {
 }
 
 .brand-logo-header {
-	width: 140px;
-	height: 140px;
+	width: 100px;
+	height: 130px;
 	padding: 3px;
 }
 
@@ -244,18 +244,23 @@ header > nav > a {
 	font-size: clamp(1rem, 1.5vw, 1.4rem);
 	text-decoration: none;
 	font-family: "IBM Plex Sans", serif;
+    font-weight: lighter;
 	line-height: 1.5em;
+    padding-inline: 5px;
 }
 
 header > nav > a:hover,
 header > nav > a:focus-visible {
 	color: var(--brand-primary);
-	border-bottom: 3px solid rgb(255, 255, 255);
+    background-color: #1f1f1f;
+    outline: 1px solid var(--brand-secondary);
+    border-radius: 5px;
+	/* border-bottom: 3px solid rgb(255, 255, 255);
 	text-shadow: 0.025em 0.025em 0 #000000, 0.05em 0.05em 0 var(--brand-primary), 0.075em 0.075em 0 #ffffff;
-	transform: translateY(-2px);
-	transition-duration: 200ms;
-	transition-property: border-bottom, background-color, transform, text-shadow;
-	transition-timing-function: linear;
+	transform: translateY(-2px); */
+	transition-duration: 300ms;
+	transition-property: border-bottom, background-color, transform, text-shadow, outline, color, border-radius;
+	transition-timing-function: ease-out;
 }
 
 /* ################################################################ */
@@ -297,7 +302,7 @@ header > nav > a:focus-visible {
 	content: "";
 	width: 130px;
 	height: 130px;
-	border: 1.6px white solid;
+	border: 2.5px white solid;
 	border-bottom: 0;
 	border-right: 0;
 	top: 0;
@@ -326,7 +331,7 @@ header > nav > a:focus-visible {
 	content: "";
 	width: 130px;
 	height: 130px;
-	border: 1.6px white solid;
+	border: 2.5px white solid;
 	border-top: 0;
 	border-right: 0;
 	bottom: 0;
