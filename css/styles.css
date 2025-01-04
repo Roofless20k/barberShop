@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+
 /* below this: KP reset */
 
 /* makes sizing simpler */
@@ -5,7 +7,7 @@
 *::before,
 *::after {
 	box-sizing: border-box;
-    /* outline: 2px solid lime; */
+	/* outline: 2px solid lime; */
 }
 
 /* remove default spacing */
@@ -169,7 +171,7 @@ textarea {
 /* ################################################################ */
 
 body {
-	font-family: var(--bodyFont);
+	font-family: "IBM Plex Sans", serif;
 	background-color: var(--dm-bckgrnd-clr);
 	color: var(--dm-font-clr);
 	font-size: var(--fs-1);
@@ -191,7 +193,7 @@ body {
 
 h2,
 h1 {
-	font-family: var(--headFont);
+	font-family: "IBM Plex Sans", serif;
 	font-weight: var(--fw-void);
 	line-height: 1.2em;
 }
@@ -221,13 +223,13 @@ header {
 }
 
 .higher-specificity-header {
-    padding-inline: 15px;
+	padding-inline: 15px;
 }
 
 .brand-logo-header {
-    width: 140px;
-    height: 140px;
-    padding: 3px;
+	width: 140px;
+	height: 140px;
+	padding: 3px;
 }
 
 header > nav {
@@ -241,7 +243,7 @@ header > nav > a {
 	color: var(--dm-font-clr);
 	font-size: clamp(1rem, 1.5vw, 1.4rem);
 	text-decoration: none;
-	font-family: var(--headFont);
+	font-family: "IBM Plex Sans", serif;
 	line-height: 1.5em;
 }
 
@@ -311,10 +313,11 @@ header > nav > a:focus-visible {
 }
 
 .shopName {
-	font-size: clamp(1.3rem, 1.9vw, 1.8rem);
+	font-size: clamp(2.3rem, 2.9vw, 3.8rem);
 	font-style: italic;
 	color: var(--brand-primary);
-	text-shadow: 0.025em 0.025em 4px #000000;
+	text-shadow: 0.03em 0.02em 1px black, 0.045em 0.045em 7px #ffffff;
+	line-height: 2.5rem;
 }
 
 .shopName::before,
@@ -752,7 +755,6 @@ header > nav > a:focus-visible {
 	line-height: 3.5rem;
 }
 
-
 /* @keyframes slideRight {
 	from {
 		transform: translateX(0);
@@ -961,11 +963,11 @@ header > nav > a:focus-visible {
 		color: var(--lm-font-clr);
 	} */
 
-	/* ################################################################ */
-	/* LIGHT HEADER STYLES */
-	/* ################################################################ */
+/* ################################################################ */
+/* LIGHT HEADER STYLES */
+/* ################################################################ */
 
-	/* header {
+/* header {
 		background-color: var(--dm-font-clr);
 	}
 
@@ -980,11 +982,11 @@ header > nav > a:focus-visible {
 		text-shadow: 0.025em 0.025em 0 #000000, 0.05em 0.05em 0 var(--brand-primary), 0.075em 0.075em 0 #000000;
 	} */
 
-	/* ################################################################ */
-	/* LIGHT SECTION STYLES */
-	/* ################################################################ */
+/* ################################################################ */
+/* LIGHT SECTION STYLES */
+/* ################################################################ */
 
-	/* .shopName {
+/* .shopName {
 		background-color: rgba(0, 0, 0, 0.845);
 		box-shadow: 0 0 19px rgb(0, 0, 0);
 		border-radius: 30px;
@@ -1146,12 +1148,12 @@ header > nav > a:focus-visible {
 		display: none;
 	}
 
-    .gallery-section {
-        min-height: 46svh;
-        padding-bottom: 60px;
-    }
+	.gallery-section {
+		min-height: 46svh;
+		padding-bottom: 60px;
+	}
 
-    .gallery-inner img {
+	.gallery-inner img {
 		width: 425px;
 	}
 
@@ -1180,11 +1182,11 @@ header > nav > a:focus-visible {
 	.service-list-wrapper > p {
 		padding-block: 0.5vh;
 	}
-    
-    .gallery-section {
-        min-height: 40svh;
-        padding-bottom: 60px;
-    }
+
+	.gallery-section {
+		min-height: 40svh;
+		padding-bottom: 60px;
+	}
 
 	.gallery-inner img {
 		width: 325px;
