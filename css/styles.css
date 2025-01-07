@@ -209,6 +209,7 @@ p {
 	padding-top: 30px;
 	padding-bottom: 15p;
 	font-size: var(--fs-paragraphs);
+    line-height: 2.2rem;
 }
 
 /* ################################################################ */
@@ -370,6 +371,8 @@ header > nav > a:focus-visible {
 	color: #fff;
 	background-color: var(--brand-secondary);
 	text-shadow: 0.045em 0.045em 2px #000000;
+    scale: 1.06;
+    transition: 300ms;
 	/* border: 1px solid #fff; */
 }
 
