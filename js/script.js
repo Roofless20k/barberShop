@@ -49,7 +49,7 @@ window.onresize = () => {
     hamburger.setAttribute("aria-expanded", "false");
 };
 
-// progressive enchancement
+// progressive enhancement
 document.body.classList.toggle("js-enabled");
 
 document.addEventListener("DOMContentLoaded", function (event) {
