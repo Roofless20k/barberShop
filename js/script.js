@@ -26,23 +26,23 @@ const MOBILE_NAVIGATION = document.querySelector("#hamburger-menu"); // mobile n
 
 //on click display mobile nav
 MENU.addEventListener("click", () => {
-	MOBILE_NAVIGATION.classList.toggle("invisible");
+	MOBILE_NAVIGATION.classList.toggle("visible");
 
 	//if displayed: rotate...
-	if (MOBILE_NAVIGATION.classList.contains("invisible") === false) {
+	if (MOBILE_NAVIGATION.classList.contains("visible") === false) {
 		const flipper = document.querySelector("#flipper"); // burger btn
-		flipper.style.rotate = "90deg";
-		flipper.style.transition = "rotate 150ms linear";
+		flipper.style.rotate = "0deg";
+		flipper.style.transition = "rotate 200ms ease-in-out";
 	} else {
 		//else color white and 0 rotate
-		flipper.style.rotate = "0deg";
-		flipper.style.transition = "rotate 150ms linear";
+		flipper.style.rotate = "90deg";
+		flipper.style.transition = "rotate 200ms ease-in-out";
 	}
 });
 
 //resets mobile nav to default and hide the navigation on each resize
 window.onresize = () => {
-	MOBILE_NAVIGATION.classList.add("invisible");
+	MOBILE_NAVIGATION.classList.remove("visible");
 	flipper.style.rotate = "0deg";
 
     let hamburger = document.getElementById("hamburger");
