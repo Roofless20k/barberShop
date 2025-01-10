@@ -1358,7 +1358,11 @@ header > nav > a:focus-visible {
     -webkit-backdrop-filter: blur(9px);
 	z-index: 999;
 	height: min-content;
+    border: 2px solid rgba(255, 255, 255, 0.212);
+    border-top: none;
     border-radius: 25px;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
 }
 
 .mobile-menu-items-wrapper div {
@@ -1372,7 +1376,7 @@ header > nav > a:focus-visible {
 	color: #fff;
 	font-size: clamp(1.4rem, 1.9vw, 1.7rem);
 	text-decoration: none;
-	width: 55vw;
+	width: 65vw;
 	padding-block: 10px;
 	background: rgb(0, 0, 0);
 	border: 1px solid var(--brand-primary);
