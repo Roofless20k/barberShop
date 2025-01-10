@@ -1205,10 +1205,6 @@ header > nav > a:focus-visible {
 		display: none;
 	}
 
-    .background-image-hero  {
-        background-attachment: initial;
-    }
-
 	.service-list-wrapper > p {
 		padding-block: 0.5vh;
 	}
@@ -1247,6 +1243,10 @@ header > nav > a:focus-visible {
 		max-width: 475px;
 	}
 
+    .background-image-hero  {
+        background-attachment: initial;
+    }
+    
 	/* ###################### ABOUT STYLES ##################### */
 	.about-image-wrapper {
 		width: 100%;
