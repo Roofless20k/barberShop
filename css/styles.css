@@ -850,24 +850,31 @@ header > nav > a:focus-visible {
 /* ##################### CONTACT/FOOTER STYLES #################### */
 /* ################################################################ */
 
+.background-image-footer {
+    background-image: url(../images/barber-chair-salon-hairdresser-previewBW.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+    background-color: rgb(7, 0, 46);
+	background-attachment: fixed;
+    width: 100vw;
+    min-height: 100vh;
+    z-index: -10;
+    position: absolute;
+    left: 0;
+}
+
 .contact-section {
 	display: flex;
 	align-items: center;
 	justify-content: space-evenly;
 	gap: 5px;
-	background-image: url(../images/barber-chair-salon-hairdresser-previewBW.jpg);
+	/* background-image: url(../images/barber-chair-salon-hairdresser-previewBW.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
-	background-position: center;
+	background-position: center; */
 	color: var(--dm-font-clr);
 }
-
-/* .social-media {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    height: 300px;
-} */
 
 .contact-span {
 	color: var(--brand-secondary);
@@ -881,11 +888,12 @@ header > nav > a:focus-visible {
 .SocialIcon {
 	/* color: #fff; */
 	background-color: var(--brand-primary);
-	width: 63px;
-	font-size: 2.5rem;
+	width: 5em;
+    height: 5em;
 	margin-bottom: 20px;
 	border-radius: 15px;
-	padding: 1px;
+	padding: 3px 10px;
+
 }
 
 .SocialIcon:hover {
@@ -1246,7 +1254,7 @@ header > nav > a:focus-visible {
     .background-image-hero  {
         background-attachment: initial;
     }
-    
+
 	/* ###################### ABOUT STYLES ##################### */
 	.about-image-wrapper {
 		width: 100%;
@@ -1269,6 +1277,11 @@ header > nav > a:focus-visible {
 		flex-direction: column;
 		gap: 25px;
 	}
+
+    .SocialIcon {
+        width: 4.4em;
+        height: 4.4em;
+    }
 
 	.g-map {
 		width: 77vw;
