@@ -1358,11 +1358,11 @@ header > nav > a:focus-visible {
     -webkit-backdrop-filter: blur(9px);
 	z-index: 999;
 	height: min-content;
-    border: 2px solid rgba(255, 255, 255, 0.212);
+    /* border: 1px solid rgba(255, 255, 255, 0.212);
     border-top: none;
-    border-radius: 25px;
+    border-radius: 75px;
     border-top-right-radius: 0;
-    border-top-left-radius: 0;
+    border-top-left-radius: 0; */
 }
 
 .mobile-menu-items-wrapper div {
@@ -1402,8 +1402,8 @@ header > nav > a:focus-visible {
 	.js-enabled .mobile-menu-items-wrapper {
 		display: none;
 		opacity: 0;
-
-		transition-property: display opacity;
+        border-radius: 0;
+		transition-property: display opacity border-radius border;
 		transition-duration: 1.2s;
 		transition-behavior: allow-discrete;
 	}
@@ -1412,7 +1412,14 @@ header > nav > a:focus-visible {
 .js-enabled .visible {
 	display: block;
 	opacity: 1;
+    border: 2px solid rgba(40, 40, 40, 0.1);
+    border-top: none;
+    border-radius: 65px;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
     @starting-style {
         opacity: 0;
+        border: 0;
+        border-radius: 0;
     }
 }
