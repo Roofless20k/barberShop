@@ -148,7 +148,7 @@ textarea {
 	margin-right: auto;
 	padding-left: 0.5rem;
 	padding-right: 0.5rem;
-	/* border: 1px white solid; */
+	/* border: 1px rgb(255, 0, 0) solid; */
 }
 
 /* .body-container {
@@ -1115,12 +1115,12 @@ header > nav > a:focus-visible {
 		display: none;
 	}
 
-	@media (prefers-color-scheme: light) {
+	/* @media (prefers-color-scheme: light) {
 		.services-section {
 			background-color: #ffffff;
 			border-image: linear-gradient(hsl(0, 0%, 100%), hsla(0, 0%, 100%, 0.9), hsla(0, 0%, 100%, 0.8), hsla(0, 0%, 100%, 0.7), hsla(0, 0%, 100%, 0.6)) fill 1;
 		}
-	}
+	} */
 
 	/* ###################### PRICES STYLES ##################### */
 	.prices-section {
@@ -1212,10 +1212,6 @@ header > nav > a:focus-visible {
 		display: none;
 	}
 
-	.service-list-wrapper > p {
-		padding-block: 0.5vh;
-	}
-
 	.gallery-section {
 		min-height: 40svh;
 		padding-bottom: 60px;
@@ -1265,11 +1261,6 @@ header > nav > a:focus-visible {
 		background-attachment: initial;
 	}
 
-	.service-list-wrapper {
-		& > p {
-			/* padding-top: 13px; */
-		}
-	}
 
 	/* ###################### FOOTER STYLES ##################### */
 	.contact-section {
