@@ -1286,6 +1286,17 @@ header > nav > a:focus-visible {
 	}
 }
 
+
+/* ################################################################ */
+/* ##################### EDGE CASES LAPTOPS ####################### */
+/* ################################################################ */
+
+@media (max-width: 1440px) and (max-height: 800px) {
+    .hero-h1 {
+        font-size: clamp(1.2rem, 5vw, 3.1125rem);
+    }
+}
+
 /* temp style to differentiate different sections on the site */
 
 .sections:nth-child(even) {
@@ -1414,3 +1425,5 @@ header > nav > a:focus-visible {
         border-radius: 0;
     }
 }
+
+
