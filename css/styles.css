@@ -1087,7 +1087,7 @@ header > nav > a:focus-visible {
 
 	.services-paragraph-wrapper {
 		flex: initial;
-		height: 100svh;
+		min-height: 100svh;
 		padding-inline-end: 0;
 		justify-content: normal;
 	}
